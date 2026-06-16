@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libro de Reclamaciones - VALI</title>
+
+    <!-- Fuentes -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@300;400;500;700;800&family=Bebas+Neue&display=swap"
+        rel="stylesheet">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/libro_reclamaciones.css">
+
+    <!-- Scripts -->
+    <script src="js/components.js" defer></script>
+    <script src="js/ubigeo.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Header Dinámico -->
+    <div id="header-container"></div>
+
+    <main>
+        <!-- HERO LIBRO DE RECLAMACIONES -->
+        <section class="reclamo-hero">
+            <div class="reclamo-hero-container">
+                <h1>LIBRO DE RECLAMACIONES</h1>
+                <p>En VALI, nos importa tu opinión. Si tienes algún inconveniente o deseas realizar una reclamación,
+                    ponemos a tu disposición nuestro Libro de Reclamaciones. Tu voz es fundamental para mejorar nuestros
+                    servicios y seguir brindando soluciones financieras de calidad.</p>
+            </div>
+        </section>
+        <section class="reclamo-ayuda-section">
+            <div class="reclamo-ayuda-card">
+                <div class="reclamo-ayuda-text">
+                    <h2>¡ESTAMOS PARA AYUDARTE!</h2>
+                    <p>Soluciona tu caso con una relación prioritaria y una solución eficiente</p>
+                </div>
+                <div class="reclamo-ayuda-action">
+                    <button class="btn-solicita-ayuda" id="btn-comunicate">CONTACTAR CON UN EXPERTO</button>
+                </div>
+            </div>
+        </section>
+        <!-- SECCIÓN FORMULARIO -->
+        <section class="reclamo-form-section">
+            <div class="reclamo-form-header">
+                <h2>¿NO RESOLVIMOS TU INCONVENIENTE?</h2>
+                <p>Por favor, completa el formulario y nos comunicaremos a la brevedad para brindarte una solución.</p>
+            </div>
+
+            <div class="reclamo-form-container">
+
+                <!-- Info Empresa -->
+                <div class="form-company-info">
+                    <img src="assets/img/logovali.png" alt="Logo VALI" class="form-logo">
+                    <p><strong>RAZÓN SOCIAL:</strong> CES VALI E.I.R.L.</p>
+                    <p><strong>RUC:</strong> 20609267772</p>
+                    <p><strong>DIRECCIÓN FISCAL:</strong> AV. MARISCAL CÁCERES E-61, PARIÑAS, TALARA, PIURA.</p>
+                </div>
+
+                <form class="reclamo-form" id="reclamoForm" enctype="multipart/form-data">
+
+                    <!-- 1. Datos -->
+                    <div class="form-section">
+                        <h3>1. Datos de la persona que presenta el reclamo</h3>
+                        <div class="form-group-inline">
+                            <label>¿Eres menor de edad? <span style="color: red;">*</span></label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="menor_edad" value="si"> Sí</label>
+                                <label><input type="radio" name="menor_edad" value="no" checked> No</label>
+                            </div>
+                        </div>
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>Nombres completos <span style="color: red;">*</span></label>
+                                <input type="text" name="nombres" placeholder="Ingresa tus nombres" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Apellidos completos <span style="color: red;">*</span></label>
+                                <input type="text" name="apellidos" placeholder="Ingresa tus apellidos" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Tipo de documento <span style="color: red;">*</span></label>
+                                <select name="tipo_documento" required>
+                                    <option value="" disabled selected>Selecciona tu tipo de documento</option>
+                                    <option value="DNI">DNI</option>
+                                    <option value="CE">Carné de Extranjería</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Número de documento <span style="color: red;">*</span></label>
+                                <input type="text" name="numero_documento" placeholder="Ingresa tu nro. de documento"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label>Correo electrónico <span style="color: red;">*</span></label>
+                                <input type="email" name="correo" placeholder="Ingresa tu correo" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Celular <span style="color: red;">*</span></label>
+                                <input type="tel" name="celular" placeholder="Ingresa tu celular" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Departamento <span style="color: red;">*</span></label>
+                                <select name="departamento" required>
+                                    <option value="" disabled selected>Selecciona tu departamento</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Provincia <span style="color: red;">*</span></label>
+                                <select name="provincia" required>
+                                    <option value="" disabled selected>Selecciona tu provincia</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Distrito <span style="color: red;">*</span></label>
+                                <select name="distrito" required>
+                                    <option value="" disabled selected>Selecciona tu distrito</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Dirección <span style="color: red;">*</span></label>
+                                <input type="text" name="direccion" placeholder="Ingresa tu dirección" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. Bien contratado -->
+                    <div class="form-section">
+                        <h3>2. Indicación del bien contratado</h3>
+                        <div class="form-group">
+                            <label>Bien contratado <span style="color: red;">*</span></label>
+                            <select name="bien_contratado" required>
+                                <option value="" disabled selected>Selecciona el bien contratado</option>
+                                <option value="electro">Garantía Electro</option>
+                                <option value="joya">Garantía Joyas de oro</option>
+                                <option value="marketplace">Marketplace</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Descripción <span style="color: red;">*</span></label>
+                            <textarea name="descripcion" placeholder="Ingresa descripción del bien" rows="4"
+                                required></textarea>
+                        </div>
+                    </div>
+
+                    <!-- 3. Detalles -->
+                    <div class="form-section">
+                        <h3>3. Detalles</h3>
+                        <label class="section-label">Elige el tipo de reclamo <span style="color: red;">*</span></label>
+                        <div class="reclamo-tipo-box">
+                            <label class="radio-box">
+                                <input type="radio" name="tipo_reclamo" value="reclamo" required>
+                                <span><strong>Reclamo:</strong> Disconformidad relacionada con los productos o
+                                    servicios. El proveedor debe dar respuesta mediante una comunicación en un plazo
+                                    máximo de quince (15) días hábiles.</span>
+                            </label>
+                            <label class="radio-box">
+                                <input type="radio" name="tipo_reclamo" value="queja" required>
+                                <span><strong>Queja:</strong> Disconformidad no relacionada a los productos o servicios;
+                                    o, malestar o descontento respecto a la atención al público. La queja no requiere
+                                    una respuesta formal por parte del proveedor, sin embargo, nos ayuda a mejorar
+                                    nuestra atención.</span>
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Detalle <span style="color: red;">*</span></label>
+                            <textarea name="detalle" placeholder="Ingresa el detalle de tu reclamo" rows="4"
+                                required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Pedido</label>
+                            <textarea name="pedido" placeholder="Indica qué es lo que solicitas" rows="4"
+                                required></textarea>
+                        </div>
+                    </div>
+
+                    <!-- 4. Adjuntos -->
+                    <div class="form-section">
+                        <h3>4. Adjuntos (Opcional)</h3>
+                        <div class="upload-box">
+                            <p>Arrastra y suelta tus archivos aquí o</p>
+                            <button type="button" class="btn-upload" id="btn-upload">SUBE LOS ARCHIVOS AQUÍ</button>
+                            <input type="file" name="archivo" id="file-input" hidden accept=".pdf,.jpg,.jpeg,.png">
+                            <p id="file-name" style="margin-top:10px; font-weight:600; color:#031a2c;"></p>
+                        </div>
+                        <p class="upload-help">Archivos permitidos: PDF, JPG, PNG. Tamaño máximo: 5MB.</p>
+                    </div>
+
+                    <!-- 5. Observaciones -->
+                    <div class="form-section form-observaciones">
+                        <h3>5. Observaciones</h3>
+                        <p>La formulación del reclamo no impide acudir a otras vías de solución de controversias ni
+                            constituye requisito previo para interponer una denuncia ante el INDECOPI.</p>
+                        <p>El proveedor deberá dar respuesta al reclamo en un plazo no mayor a quince (15) días hábiles.
+                        </p>
+
+                        <label class="checkbox-box">
+                            <input type="checkbox" required>
+                            <span>He leído y acepto la política de privacidad de datos <span
+                                    style="color: red;">*</span></span>
+                        </label>
+                    </div>
+
+                    <div id="mensajeExito"
+                        style="display:none; background-color: #d4edda; color: #155724; padding: 15px; margin-bottom: 20px; border-radius: 4px; text-align: center; font-weight: bold; border: 1px solid #c3e6cb;">
+                        TU RECLAMO FUE INGRESADO CON ÉXITO
+                    </div>
+
+                    <div class="form-submit-container">
+                        <button type="submit" class="btn-submit-reclamo" id="btn-submit">REALIZAR RECLAMO</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- Footer Dinámico -->
+    <div id="footer-container"></div>
+
+</body>
+<script>
+    // Lógica para botón de comunicarse
+    const btnComunicate = document.getElementById('btn-comunicate');
+    if (btnComunicate) {
+        btnComunicate.addEventListener('click', () => {
+            const mensaje = 'Hola, quisiera comunicarme con un asesor para recibir más información.';
+            const numero = '51987555254';
+            const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+            window.open(url, '_blank');
+        });
+    }
+
+    // Lógica para subida de archivo
+    const btnUpload = document.getElementById('btn-upload');
+    const fileInput = document.getElementById('file-input');
+    const fileNameDisplay = document.getElementById('file-name');
+
+    if (btnUpload && fileInput) {
+        btnUpload.addEventListener('click', () => {
+            fileInput.click();
+        });
+
+        fileInput.addEventListener('change', (e) => {
+            if (e.target.files.length > 0) {
+                fileNameDisplay.textContent = 'Archivo adjuntado: ' + e.target.files[0].name;
+            } else {
+                fileNameDisplay.textContent = '';
+            }
+        });
+    }
+
+    // Lógica para envío del formulario
+    const reclamoForm = document.getElementById('reclamoForm');
+    const mensajeExito = document.getElementById('mensajeExito');
+    const btnSubmit = document.getElementById('btn-submit');
+
+    if (reclamoForm) {
+        reclamoForm.addEventListener('submit', function (e) {
+            e.preventDefault(); // Evita recargar la página
+
+            btnSubmit.textContent = 'ENVIANDO...';
+            btnSubmit.disabled = true;
+
+            // Recolectar datos del formulario
+            const formData = new FormData(reclamoForm);
+
+            // Enviar a nuestro archivo PHP local
+            fetch('guardar_reclamo.php', {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => response.json())
+                .then(data => {
+                    btnSubmit.textContent = 'REALIZAR RECLAMO';
+                    btnSubmit.disabled = false;
+
+                    if (data.success) {
+                        // Mostrar mensaje de éxito
+                        mensajeExito.style.display = 'block';
+
+                        // Limpiar formulario y archivo adjunto
+                        reclamoForm.reset();
+                        fileNameDisplay.textContent = '';
+
+                        // Opcional: ocultar mensaje después de 5 segundos
+                        setTimeout(() => {
+                            mensajeExito.style.display = 'none';
+                        }, 5000);
+                    } else {
+                        alert('Hubo un error al guardar el reclamo: ' + (data.error || 'Inténtalo nuevamente.'));
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    btnSubmit.textContent = 'REALIZAR RECLAMO';
+                    btnSubmit.disabled = false;
+                    alert('Ocurrió un error de red. Por favor verifica tu conexión e intenta de nuevo.');
+                });
+        });
+    }
+</script>
+
+</html>

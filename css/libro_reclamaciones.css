@@ -1,0 +1,458 @@
+/* ==========================================================================
+   Estilos específicos para la página de Libro de Reclamaciones
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   HERO BANNER
+   -------------------------------------------------------------------------- */
+.reclamo-hero {
+    position: relative;
+    width: 100%;
+    padding: 120px 20px;
+    background-image: url('../assets/img/LIBRO DE RECLAMACIONES/__fondoazulparalogos.webp');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.reclamo-hero-container {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.reclamo-hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    color: #ffffff;
+    font-size: 72px;
+    letter-spacing: 1.5px;
+    margin-bottom: 30px;
+    line-height: 1;
+}
+
+.reclamo-hero p {
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   SECCIÓN FORMULARIO
+   -------------------------------------------------------------------------- */
+.reclamo-form-section {
+    background-color: #ffffff;
+    padding: 60px 20px;
+    color: #031a2c;
+}
+
+.reclamo-form-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+.reclamo-form-header h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 42px;
+    color: #031a2c;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.reclamo-form-header p {
+    font-family: 'Inter', sans-serif;
+    color: #4b5563;
+    font-size: 16px;
+}
+
+.reclamo-form-container {
+    background-color: #f3f4f6;
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 24px;
+    padding: 50px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.form-company-info {
+    margin-bottom: 40px;
+}
+
+.form-logo {
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+.form-company-info p {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: #374151;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.form-section {
+    margin-bottom: 40px;
+}
+
+.form-section h3 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #031a2c;
+    margin-bottom: 25px;
+}
+
+.form-group-inline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    max-width: 500px;
+}
+
+.form-group-inline label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: #031a2c;
+}
+
+.radio-group {
+    display: flex;
+    gap: 20px;
+}
+
+.radio-group label {
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-grid .form-group {
+    margin-bottom: 0;
+}
+
+.form-group label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    color: #031a2c;
+    margin-bottom: 8px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group select,
+.form-group textarea {
+    background-color: transparent;
+    border: 1px solid #9ca3af;
+    border-radius: 8px;
+    padding: 12px 15px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #374151;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #031a2c;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.section-label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: #031a2c;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.reclamo-tipo-box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.radio-box {
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    cursor: pointer;
+    background-color: transparent;
+    transition: background-color 0.3s;
+}
+
+.radio-box:hover {
+    background-color: #e5e7eb;
+}
+
+.radio-box input[type="radio"] {
+    margin-top: 5px;
+}
+
+.radio-box span {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #4b5563;
+}
+
+.radio-box strong {
+    color: #031a2c;
+}
+
+.upload-box {
+    background-color: #e5e7eb;
+    border-radius: 8px;
+    padding: 40px 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.upload-box p {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 15px;
+}
+
+.btn-upload {
+    background-color: #031a2c;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.btn-upload:hover {
+    background-color: #052c4a;
+}
+
+.upload-help {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    color: #6b7280;
+}
+
+.form-observaciones p {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    color: #6b7280;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.checkbox-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.checkbox-box span {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #031a2c;
+}
+
+.form-submit-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.btn-submit-reclamo {
+    background-color: #031a2c;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 15px 50px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.btn-submit-reclamo:hover {
+    background-color: #052c4a;
+    transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
+   SECCIÓN AYUDA FINAL
+   -------------------------------------------------------------------------- */
+.reclamo-ayuda-section {
+    padding: 0 20px;
+    margin-top: -80px;
+    /* Superpone sobre el hero oscuro */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    /* Fondo transparente en los primeros 80px (sobre el hero), blanco el resto para ocultar la franja ploma */
+    background: linear-gradient(to bottom, transparent 80px, #ffffff 80px);
+}
+
+.reclamo-ayuda-card {
+    background-color: #edf2fb;
+    max-width: 900px;
+    width: 100%;
+    border-radius: 24px;
+    padding: 40px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.reclamo-ayuda-text h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 42px;
+    color: #031a2c;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.reclamo-ayuda-text p {
+    font-family: 'Inter', sans-serif;
+    color: #4b5563;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.reclamo-ayuda-action {
+    flex-shrink: 0;
+    margin-left: 20px;
+}
+
+.btn-solicita-ayuda {
+    background-color: #FDD835;
+    color: #031a2c;
+    border: none;
+    padding: 12px 30px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.3s;
+    text-transform: uppercase;
+}
+
+.btn-solicita-ayuda:hover {
+    transform: translateY(-2px);
+}
+
+/* Responsive del banner ayuda para celular */
+@media (max-width: 768px) {
+    .reclamo-ayuda-card {
+        padding: 20px 15px;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .reclamo-ayuda-text {
+        flex: 1;
+    }
+
+    .reclamo-ayuda-text h2 {
+        font-size: 15px;
+        line-height: 1.1;
+        margin-bottom: 5px;
+    }
+
+    .reclamo-ayuda-text p {
+        font-size: 12px;
+        line-height: 1.3;
+    }
+
+    .reclamo-ayuda-action {
+        flex-shrink: 0;
+        margin-left: 0;
+        width: 130px;
+    }
+
+    .btn-solicita-ayuda {
+        font-size: 14px;
+        padding: 10px;
+        width: 100%;
+        white-space: normal;
+        /* Permite que el texto del botón baje de línea si es largo */
+        line-height: 1.2;
+    }
+
+    .reclamo-ayuda-section {
+        margin-top: -40px;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .reclamo-hero {
+        padding: 80px 20px;
+    }
+
+    .reclamo-hero h1 {
+        font-size: 48px;
+    }
+
+    .reclamo-hero p {
+        font-size: 15px;
+        text-align: justify;
+    }
+
+    .reclamo-form-container {
+        padding: 30px 20px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group-inline {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+}

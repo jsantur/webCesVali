@@ -1,0 +1,255 @@
+/* ==========================================================================
+   Estilos específicos para la página de Experiencia VALI
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   HERO EXPERIENCIA
+   -------------------------------------------------------------------------- */
+.exp-hero {
+    position: relative;
+    width: 100%;
+    height: 800px;
+    background-image: url('../assets/img/EXPERIENCIA VALI/completo.webp');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+.exp-hero-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 40px 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    position: relative;
+}
+
+.exp-hero-copy {
+    max-width: 500px;
+    color: #ffffff;
+    text-align: left;
+}
+
+.exp-hero-copy h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 60px;
+    line-height: 1;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.exp-hero-copy h1 span {
+    color: #FDD835;
+}
+
+.exp-hero-copy p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.exp-hero .btn-outline {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-560px);
+    bottom: 120px;
+    padding: 15px 60px;
+    font-size: 18px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* --------------------------------------------------------------------------
+   BENEFICIOS GRID
+   -------------------------------------------------------------------------- */
+.exp-benefits {
+    background-color: #021422;
+    /* Un azul muy oscuro */
+    padding: 80px 20px;
+    position: relative;
+    /* Patrón de chevron suave usando linear-gradient si se desea, o simplemente color sólido */
+    background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.01) 0px, rgba(255, 255, 255, 0.01) 2px, transparent 2px, transparent 8px),
+        repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.01) 0px, rgba(255, 255, 255, 0.01) 2px, transparent 2px, transparent 8px);
+}
+
+.exp-benefits-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.benefits-grid {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 80px;
+}
+
+.b-col {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.b-col.col-center {
+    justify-content: center;
+}
+
+.b-card {
+    background-color: transparent;
+    width: 260px;
+    display: flex;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.b-card:hover {
+    transform: translateY(-5px);
+}
+
+.b-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --------------------------------------------------------------------------
+   CTA (En VALI no solo te prestamos...)
+   -------------------------------------------------------------------------- */
+.exp-cta {
+    text-align: center;
+    color: #ffffff;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.exp-cta h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 1.3;
+    margin-bottom: 40px;
+    text-align: justify;
+}
+
+.exp-cta h2 strong {
+    font-weight: 700;
+}
+
+.btn-unete {
+    background-color: #FDD835;
+    color: #031a2c;
+    border: none;
+    border-radius: 4px;
+    padding: 15px 40px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.3s;
+    text-transform: uppercase;
+}
+
+.btn-unete:hover {
+    transform: translateY(-3px);
+}
+
+.cta-line {
+    height: 10px;
+    background-color: #FDD835;
+    width: 80%;
+    margin: 40px auto 0;
+    border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .benefits-grid {
+        flex-wrap: wrap;
+    }
+
+    .b-col.col-center {
+        width: 100%;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .exp-hero {
+        height: auto;
+        min-height: 535px;
+        padding: 0;
+
+        background-size: cover;
+        /* Reemplaza esta ruta con tu imagen para celular */
+        background-image: url('../assets/img/EXPERIENCIA VALI/vistacelular.webp');
+    }
+
+    .exp-hero-container {
+        padding: 30px 20px 30px 20px;
+        justify-content: flex-end;
+        align-items: flex-start;
+        text-align: left;
+        margin: 0 auto;
+        height: 100%;
+        min-height: 535px;
+        position: relative;
+    }
+
+    .exp-hero-copy h1 {
+        font-size: 50px;
+    }
+
+    .exp-hero-copy p {
+        font-size: 16px;
+    }
+
+    .exp-cta h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .b-col {
+        display: contents;
+    }
+
+    .b-card {
+        width: 100%;
+    }
+
+    .b-col.col-center .b-card {
+        grid-column: span 2;
+        justify-self: center;
+        width: calc(50% - 7.5px);
+    }
+
+    .exp-hero .btn-outline {
+        position: absolute;
+        bottom: 40px; /* Ajustado para celular */
+        left: 20px; 
+        right: auto;
+        padding: 8px 20px;
+        font-size: 14px;
+        align-self: flex-start;
+        transform: none;
+    }
+}

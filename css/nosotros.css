@@ -1,0 +1,446 @@
+/* 
+  nosotros.css 
+  Estilos específicos para la página "Nosotros"
+*/
+
+/* --- CARGA DE FUENTES --- */
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('../assets/fonts/Bebas_Neue/BebasNeue-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../assets/fonts/Inter/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat 2';
+  src: url('../assets/fonts/Montserrat 2/Montserrat-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+/* --- VARIABLES --- */
+:root {
+  --n-color-primary: #1b3140;
+  --n-color-secondary: #0b3a42;
+  --n-color-dark: #031a2c;
+  --n-color-accent: #fcd320;
+  /* Amarillo VALI */
+  --n-color-text: #5f6570;
+  --n-color-light: #f4f7fb;
+}
+
+/* --- CONTENEDORES GLOBALES NOSOTROS --- */
+.nosotros-page {
+  font-family: 'Inter', 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+.n-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* --- HERO / BANNER --- */
+.n-hero {
+  position: relative;
+  min-height: 750px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  padding: 80px 60px;
+}
+
+.n-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /*background: linear-gradient(90deg, rgba(3, 26, 44, 0.9) 0%, rgba(3, 26, 44, 0.4) 50%, rgba(3, 26, 44, 0) 100%);*/
+  z-index: 1;
+}
+
+.n-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  color: white;
+  transform: scale(0.92);
+  transform-origin: left center;
+}
+
+.n-hero h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 64px;
+  line-height: 1.1;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.n-hero h1 span {
+  color: var(--n-color-accent);
+}
+
+.n-hero p {
+  font-family: 'Montserrat 2', sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 40px;
+  color: #e2e8f0;
+}
+
+.n-stats {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.n-stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.n-stat-number {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 72px;
+  color: #ffffff;
+  /* It's white in the provided screenshot */
+  line-height: 1;
+  display: flex;
+  align-items: baseline;
+}
+
+.n-stat-number .mil {
+  font-size: 32px;
+  margin-left: 2px;
+}
+
+.n-stat-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: 300;
+  letter-spacing: 0px;
+  margin-top: -5px;
+  /* Pull text slightly closer to numbers */
+}
+
+/* --- REGISTRATION BAR --- */
+.n-registro {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  /* Center horizontally and drop it exactly halfway out of the hero */
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.n-registro img {
+  max-width: 900px;
+  width: 100%;
+  height: auto;
+  border-radius: 40px;
+  /* In case the image doesn't have it, but it should */
+}
+
+/* --- QUIENES SOMOS --- */
+.n-quienes-somos {
+  background-color: #ffffff;
+  padding: 100px 0;
+}
+
+.n-quienes-somos .n-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.n-qs-text {
+  flex: 1;
+  max-width: 500px;
+}
+
+.n-qs-text h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 48px;
+  color: var(--n-color-primary);
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+.n-qs-text p {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--n-color-text);
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.n-qs-text strong {
+  color: var(--n-color-primary);
+  font-weight: 700;
+}
+
+.n-qs-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.n-qs-image img {
+  max-width: 100%;
+  border-radius: 12px;
+  /*box-shadow: 0 20px 40px rgba(0,0,0,0.1);*/
+}
+
+/* --- MISION Y VISION --- */
+.n-mision-vision {
+
+  /* Efecto de solapamiento */
+  padding: 40px 0;
+}
+
+.n-mv-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-image: url(../assets/img/NOSOTROS/__MISIONYVISIONcopia.webp);
+  background-size: cover;
+  border-radius: 24px;
+  padding: 0px 60px;
+  /* Restaurar padding vertical para darle altura */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  color: white;
+  box-shadow: 0 30px 60px rgba(27, 49, 64, 0.15);
+}
+
+.n-mv-box {
+  flex: 1;
+  max-width: 350px;
+  /* Evitar que el texto empuje a la mascota */
+}
+
+.n-mision {
+  text-align: left;
+}
+
+.n-mision h3 {
+  color: #ffffff;
+}
+
+.n-vision {
+  text-align: right;
+}
+
+.n-vision h3 {
+  color: var(--n-color-accent);
+}
+
+.n-mv-box h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 48px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.n-mv-box p {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+.n-mv-mascot {
+  flex: 0 0 auto;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.n-mv-mascot::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 140%;
+  height: 140%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0) 70%);
+  z-index: -1;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+@keyframes floatMascot {
+  0% {
+    transform: scale(0.90) translateY(0px);
+  }
+
+  50% {
+    transform: scale(0.90) translateY(-15px);
+  }
+
+  100% {
+    transform: scale(0.90) translateY(0px);
+  }
+}
+
+.n-mv-mascot img {
+  width: 100%;
+  height: auto;
+  transform: scale(0.90);
+  /* Hace que la mascota sobresalga del contenedor por arriba y abajo */
+  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.4));
+  animation: floatMascot 4s ease-in-out infinite;
+}
+
+/* --- NUESTROS PRINCIPIOS --- */
+.n-principios {
+  background-color: var(--n-color-light);
+  /* Fondo gris claro según la imagen */
+  padding: 80px 0;
+  text-align: center;
+}
+
+.n-principios h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 48px;
+  color: var(--n-color-primary);
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+}
+
+.n-principios-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+.n-p-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+  /* Espacio entre el ícono y el texto */
+}
+
+.n-p-item img {
+  height: 80px;
+  /* Altura de los íconos */
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.n-p-text {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 20px;
+  /* Tamaño ligeramente mayor para mejor lectura */
+  color: var(--n-color-text);
+  /* Color gris/oscuro para el texto */
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 992px) {
+  .n-quienes-somos .n-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .n-qs-text {
+    max-width: 100%;
+  }
+
+  .n-mv-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .n-mision,
+  .n-vision {
+    text-align: center;
+  }
+
+  .n-mv-mascot {
+    margin: 30px 0;
+  }
+
+  .n-principios-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .n-hero {
+    height: 120vw;
+    /* Altura proporcional al ancho de pantalla */
+    min-height: 450px;
+    max-height: 600px;
+    background-size: cover;
+    background-position: center top;
+    padding: 0;
+    /* Quita el padding enorme que dejaba espacio abajo */
+  }
+
+  .n-hero::after {
+    display: none;
+    /* Elimina el degradado oscuro que se ponía encima/debajo */
+  }
+
+  .n-registro {
+    width: 90%;
+    /* Asegura que la barra de registro no se desborde horizontalmente */
+  }
+
+  .n-hero h1 {
+    font-size: 48px;
+  }
+
+  .n-stats {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .n-stat-divider {
+    width: 100%;
+    height: 2px;
+  }
+
+  .n-principios-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 15px;
+  }
+
+  .n-p-item img {
+    height: 60px;
+  }
+}

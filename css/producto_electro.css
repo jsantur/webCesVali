@@ -1,0 +1,756 @@
+/* CSS para Producto Electro */
+
+.electro-hero {
+    position: relative;
+    width: 100%;
+    min-height: 600px;
+    height: calc(100vh - 100px);
+    /* Restando la altura del header aprox */
+    background-image: url('../assets/img/PRODUCTO_ELECTRO/E_BANNER_ELECTRO.webp');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    padding: 0 60px;
+}
+
+.electro-hero-container {
+    max-width: 1132px;
+    width: 100%;
+    margin: 245px auto 0px auto;
+}
+
+.electro-hero-copy {
+    max-width: 500px;
+}
+
+.electro-hero-copy h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 80px;
+    line-height: 0.95;
+    color: #ffffff;
+    margin: 0 0 20px 0;
+    letter-spacing: 1px;
+}
+
+.electro-hero-copy h1 span {
+    color: #FDD835;
+    font-size: 110px;
+    /* ELECTRO es un poco más grande según la imagen */
+}
+
+.electro-hero-copy p {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    color: #ffffff;
+    line-height: 1.4;
+    font-weight: 300;
+    margin: 0 0 40px 0;
+    max-width: 450px;
+}
+
+.btn-outline-yellow {
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid #FDD835;
+    padding: 12px 24px;
+    font-weight: 700;
+    border-radius: 0;
+    /* Si es cuadrado */
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-yellow:hover {
+    background: #FDD835;
+    color: #031f24;
+}
+
+/* Responsividad básica para el hero */
+@media (max-width: 900px) {
+    .electro-hero {
+        padding: 40px 30px;
+        background-position: 70% center;
+        /* Ajustar fondo en tablets */
+    }
+
+    .electro-hero-copy h1 {
+        font-size: 60px;
+    }
+
+    .electro-hero-copy h1 span {
+        font-size: 80px;
+    }
+
+    .electro-hero-copy p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .electro-hero {
+        padding: 0 20px 40px;
+        /* Padding ajustado para alinear el botón abajo */
+        background-position: center top;
+        background-size: cover;
+        height: 125vw;
+        min-height: 450px;
+        max-height: 600px;
+        display: flex;
+        align-items: flex-end;
+        /* Reemplaza esta ruta con tu imagen para celular */
+        background-image: url('../assets/img/PRODUCTO_ELECTRO/bannermovil.webp');
+    }
+
+    .electro-hero::after {
+        display: none;
+    }
+
+    .electro-hero-container {
+        position: relative;
+        z-index: 1;
+        margin: 0;
+        width: 100%;
+    }
+
+    .btn-outline-yellow {
+        width: 100%;
+    }
+
+    .electro-hero-copy h1 {
+        font-size: 50px;
+    }
+
+    .electro-hero-copy h1 span {
+        font-size: 65px;
+    }
+
+    .electro-hero-copy p {
+        font-size: 18px;
+    }
+}
+
+/* SECTION INFO ELECTRO */
+.electro-info {
+    padding: 80px 60px;
+    background-color: #ffffff;
+}
+
+.electro-info-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+/* Calculadora */
+.electro-calc-card {
+    flex: 0 0 450px;
+    background-color: #f1f4f6;
+    border-radius: 24px;
+    padding: 40px;
+}
+
+.calc-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.calc-header h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    color: #143042;
+    font-size: 36px;
+    margin-bottom: 5px;
+    letter-spacing: 0.5px;
+}
+
+.calc-header p {
+    font-size: 14px;
+    color: #4b5563;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.calc-header-small h2 {
+    font-size: 26px;
+    margin-top: 15px;
+}
+
+.calc-divider {
+    border: 0;
+    height: 1px;
+    background-color: #e5e7eb;
+    margin: 25px 0;
+}
+
+.calc-group,
+.calc-group-btn {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.calc-group-btn {
+    margin-top: 10px;
+}
+
+.btn-tasar {
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 12px;
+    margin-bottom: 0;
+}
+
+.calc-group label {
+    font-size: 11px;
+    font-weight: 700;
+    color: #143042;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+}
+
+.calc-group input,
+.calc-group select,
+.calc-static-box {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 14px;
+    font-size: 13px;
+    color: #6b7280;
+    width: 100%;
+    outline: none;
+}
+
+.calc-static-box {
+    background-color: #143042;
+    color: #ffffff;
+    font-weight: 700;
+    text-align: center;
+    padding: 12px 0;
+}
+
+.calc-top-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.calc-inputs-left {
+    flex: 1;
+}
+
+.calc-image-right {
+    width: 160px;
+    flex-shrink: 0;
+}
+
+.calc-image-right img {
+    width: 100%;
+    display: block;
+
+}
+
+.calc-three-cols {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.calc-three-cols .calc-group {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+.calc-two-cols {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.calc-two-cols .calc-group {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+/* Modificador Hero Joyas */
+.joyas-hero {
+    background-image: url('../assets/img/PRODUCTO_JOYAS/J_BANNER_JOYAS.webp');
+}
+
+@media (max-width: 600px) {
+    .joyas-hero {
+        /* Reemplaza esta ruta con tu imagen para celular */
+        background-image: url('../assets/img/PRODUCTO_JOYAS/MOBIL/banner_joyas_mobil.webp');
+    }
+}
+
+.calc-result-box {
+    background-color: #143042;
+    border-radius: 12px;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.result-label {
+    display: block;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.result-amount {
+    color: #FDD835;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 56px;
+    line-height: 1;
+}
+
+.calc-date {
+    text-align: center;
+    font-size: 12px;
+    color: #4b5563;
+    margin-bottom: 25px;
+}
+
+.btn-calc-submit {
+    width: 100%;
+    background-color: #FDD835;
+    color: #031a2c;
+    border: none;
+    border-radius: 8px;
+    padding: 15px;
+    font-size: 18px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.3s;
+    margin-bottom: 15px;
+}
+
+.btn-calc-submit:hover {
+    transform: translateY(-2px);
+}
+
+.calc-disclaimer {
+    font-size: 9px;
+    color: #6b7280;
+    text-align: justify;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Columna Derecha */
+.electro-info-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+/* Requisitos */
+.electro-requisitos {
+    text-align: right;
+}
+
+.electro-requisitos h2,
+.electro-funciona h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    color: #143042;
+    font-size: 42px;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+
+.electro-requisitos ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.electro-requisitos li {
+    font-size: 15px;
+    color: #6b7280;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.electro-requisitos li svg {
+    flex-shrink: 0;
+}
+
+/* Como Funciona */
+.electro-funciona {
+    text-align: right;
+}
+
+.funciona-boxes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.f-box {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-align: left;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.f-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06);
+    border-color: #cbd5e1;
+}
+
+.f-icon {
+    flex-shrink: 0;
+    background-color: #ffffff;
+    width: 54px;
+    height: 54px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.f-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.f-text h4 {
+    color: #0f2b38;
+    font-size: 13px;
+    font-weight: 800;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.f-text p {
+    color: #64748b;
+    font-size: 11px;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.f-icon img {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+}
+
+/* Dudas */
+.electro-dudas {
+    background-color: #143042;
+    border-radius: 60px 8px 60px 8px;
+    padding: 30px 30px 30px 48%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 40px;
+    overflow: hidden;
+    min-height: 300px;
+}
+
+.dudas-img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 46%;
+    max-width: 230px;
+    z-index: 2;
+    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.35));
+    display: block;
+}
+
+.dudas-content {
+    text-align: center;
+    position: relative;
+    z-index: 3;
+    width: 100%;
+}
+
+.dudas-content h2 {
+    color: #FDD835;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 38px;
+    margin: 0 0 8px 0;
+    letter-spacing: 0.5px;
+    line-height: 1.05;
+}
+
+.dudas-content p {
+    color: #ffffff;
+    font-size: 15px;
+    margin: 0 0 18px 0;
+    line-height: 1.4;
+    font-weight: 300;
+}
+
+.btn-dudas-wa {
+    background-color: #FDD835;
+    color: #031a2c;
+    border: none;
+    border-radius: 10px;
+    padding: 11px 20px;
+    font-size: 18px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.3s;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.btn-dudas-wa svg {
+    width: 22px;
+    height: 22px;
+}
+
+.btn-dudas-wa:hover {
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .electro-info-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .electro-calc-card {
+        flex: auto;
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .electro-info-right {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .electro-requisitos,
+    .electro-funciona {
+        text-align: center;
+    }
+
+    .electro-requisitos li {
+        justify-content: center;
+    }
+
+    .funciona-boxes {
+        grid-template-columns: repeat(2, 1fr);
+        /* Mantiene 2x2 pero lo centra si es necesario */
+    }
+}
+
+@media (max-width: 768px) {
+    .electro-info {
+        padding: 40px 20px;
+    }
+
+    .electro-calc-card {
+        padding: 30px 20px;
+    }
+
+    .calc-top-row {
+        flex-direction: column;
+    }
+
+    .calc-image-right {
+        align-self: center;
+        margin-top: 20px;
+    }
+
+    .calc-three-cols {
+        flex-direction: column;
+    }
+
+    .electro-dudas {
+        padding: 30px 20px 30px 44%;
+        min-height: 260px;
+    }
+
+    .dudas-img {
+        width: 42%;
+        max-width: 180px;
+    }
+
+    .dudas-content h2 {
+        font-size: 30px;
+    }
+
+    .dudas-content p {
+        font-size: 13px;
+    }
+
+    .btn-dudas-wa {
+        font-size: 15px;
+        padding: 9px 16px;
+    }
+
+    .funciona-boxes {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .f-box {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+/* PREGUNTAS FRECUENTES (FAQ) */
+.electro-faq {
+    background: radial-gradient(circle at center, #0f2b38 0%, #031a2c 100%);
+    padding: 80px 20px;
+}
+
+.faq-container {
+    max-width: 1200px;
+    /* Ancho máximo amplio para permitir el grid de 2 columnas */
+    margin: 0 auto;
+}
+
+.faq-container h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    color: #FDD835;
+    font-size: 56px;
+    text-align: center;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+/* Lista de 1 columna (por defecto electro) */
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 800px;
+    /* La lista de 1 columna se mantiene delgada */
+    margin: 0 auto;
+}
+
+/* Grid de 2 columnas (para joyas) */
+.faq-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.faq-col {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Responsive para grid 2 columnas */
+@media (max-width: 768px) {
+    .faq-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .faq-container h2 {
+
+        font-size: 32px;
+
+    }
+}
+
+.faq-item {
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    color: #ffffff;
+    transition: background-color 0.3s;
+    overflow: hidden;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.faq-question:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.faq-question span {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.faq-icon {
+    flex-shrink: 0;
+    color: #ffffff;
+    opacity: 0.8;
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    padding: 0 24px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.faq-answer p {
+    margin: 0;
+    padding: 16px 0;
+    font-size: 13px;
+    color: #d1d5db;
+    line-height: 1.5;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+}
+
+/* Estado Activo (Acordeón Abierto) */
+.faq-item.active .faq-answer {
+    max-height: 300px;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(180deg);
+}
+
+.faq-item.active .faq-question {
+    background-color: rgba(255, 255, 255, 0.1);
+}

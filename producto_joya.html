@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garantía Electro - VALI</title>
+
+    <!-- Fuentes -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Poppins:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;700;800&family=Bebas+Neue&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/producto_electro.css">
+    <link rel="stylesheet" href="css/joyas_summary.css">
+    <script src="js/components.js" defer></script>
+</head>
+
+<body>
+
+    <div id="header-container"></div>
+
+    <main>
+        <!-- HERO JOYAS -->
+        <section class="electro-hero joyas-hero">
+            <div class="electro-hero-container">
+                <div class="electro-hero-copy">
+                    <!--<h1>GARANTÍA EN <br><span>JOYAS</span></h1>
+                    <p>Transforma tu oro y joyas en liquidez inmediata.</p> -->
+                    <a href="#como-funciona" class="btn-outline-yellow">CONOCE CÓMO FUNCIONA</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION INFO ELECTRO (Calculadora + Requisitos) -->
+        <section class="electro-info" id="calculadora">
+            <div class="electro-info-container">
+
+                <!-- IZQUIERDA: Calculadora -->
+                <div class="electro-calc-card">
+                    <div class="calc-header">
+                        <h2>CALCULA TU PRÉSTAMO</h2>
+                        <p>Convierte oro en dinero hoy y descubre<br>tu cuota al instante</p>
+                    </div>
+
+                    <div class="calc-two-cols">
+                        <div class="calc-group">
+                            <label>Oro(Pureza)</label>
+                            <select id="calc-kilates">
+
+                                <option value="18">18k</option>
+                                <option value="21" selected>21k</option>
+
+                            </select>
+                        </div>
+                        <div class="calc-group">
+                            <label>PESO(Gramos)</label>
+                            <input type="number" id="calc-peso" placeholder="Escribir peso" value="1" min="0.1"
+                                step="0.1">
+                        </div>
+                    </div>
+
+                    <div class="calc-two-cols">
+                        <div class="calc-group" style="margin-bottom: 15px;">
+                            <label>MONEDA</label>
+                            <select>
+                                <option>PEN - Sol peruano</option>
+                            </select>
+                        </div>
+                        <div class="calc-group">
+                            <label>Plazo</label>
+                            <select>
+                                <option>30 días</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="btn-calc-submit" id="btn-tasar">CONTINUAR</button>
+
+
+                    <div class="calc-summary-card" id="summary-card" style="display: none;">
+                        <div class="summary-top">
+                            <h3>Crédito Solicitado</h3>
+                            <div class="summary-loan-amount" id="calc-prestamo-joyas">S/ 0.00</div>
+                        </div>
+                        <div class="summary-details">
+                            <div class="summary-row">
+                                <span class="summary-label"><span class="dot dot-blue"></span> Intereses:</span>
+                                <span class="summary-value" id="calc-interes-joyas">S/ 0.00</span>
+                            </div>
+                            <div class="summary-row">
+                                <span class="summary-label"><span class="dot dot-orange"></span> Tasa de interés</span>
+                                <span class="summary-value">7.9 %</span>
+                            </div>
+                        </div>
+                        <div class="summary-total">
+                            <span class="total-label">Estarías pagando:</span>
+                            <div class="total-amount" id="calc-monto-joyas">S/ 0.00</div>
+                        </div>
+                        <div class="summary-date">
+                            Fecha de pago: <span id="calc-fecha-joyas">--/--/----</span>
+                        </div>
+                    </div>
+                    <button class="btn-calc-submit" id="btn-solicitar" style="display: none;">TASAR AHORA</button>
+
+                    <p class="calc-disclaimer">* La información emitida en el presente simulador es referencial.<br>
+                        * Los montos, intereses y tasa de interés preferencial del 7.9% mensual calculados son válidos
+                        para clientes recurrentes con buena calificación crediticia.<br>
+                        * El valor final del Oro está sujeto a verificación y evaluación presencial en Agencia.<br>
+                        * Estamos registrados en la SBS. <strong><a
+                                href="https://www.sbs.gob.pe/supervisados-y-registros/registros/otros-registros/casas-de-cambio-prestamos-y-empenos/empresas-de-prestamos-y-o-empeno">Revisalo
+                                aquí.</a></strong></p>
+                </div>
+
+                <!-- DERECHA: Info y Dudas -->
+                <div class="electro-info-right">
+
+                    <!-- Requisitos -->
+                    <div class="electro-requisitos">
+                        <h2>REQUISITOS</h2>
+                        <ul>
+                            <li>Visita nuestra agencia <svg viewBox="0 0 24 24" width="20" height="20" stroke="#F4511E"
+                                    stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg></li>
+                            <li>Presenta tu DNI y tu joya en Garantía <svg viewBox="0 0 24 24" width="20" height="20"
+                                    stroke="#F4511E" stroke-width="2" fill="none" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg></li>
+                            <li>Obten tu dinero sin colas ni papeleos <svg viewBox="0 0 24 24" width="20" height="20"
+                                    stroke="#F4511E" stroke-width="2" fill="none" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg></li>
+                        </ul>
+                    </div>
+
+                    <!-- Como Funciona -->
+                    <div class="electro-funciona" id="como-funciona">
+                        <h2>¿COMO FUNCIONA?</h2>
+                        <div class="funciona-boxes">
+                            <div class="f-box">
+                                <div class="f-icon">
+                                    <img src="assets/icons/__icono_diamante.svg" alt="">
+                                </div>
+                                <div class="f-text">
+                                    <h4>TRAE TU GARANTÍA</h4>
+                                    <p>Acércate a nuestra agencia más cercana</p>
+                                </div>
+                            </div>
+                            <div class="f-box">
+                                <div class="f-icon">
+                                    <img src="assets/icons/E_ICON_D1.svg" alt="">
+                                </div>
+                                <div class="f-text">
+                                    <h4>RECIBES TU DINERO</h4>
+                                    <p>En efectivo o transferencia, al instante. ¡Lo que tú decidas!</p>
+                                </div>
+                            </div>
+                            <div class="f-box">
+                                <div class="f-icon">
+                                    <img src="assets/icons/E_ICONS_D3.svg" alt="">
+                                </div>
+                                <div class="f-text">
+                                    <h4>Paga a través de: YAPE,BCP e<br>INTERBANK</h4>
+                                    <p>Múltiples opciones de pago</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dudas -->
+                    <div class="electro-dudas">
+                        <img src="assets/img/PRODUCTO_JOYAS/P.webp" alt="Dudas" class="dudas-img">
+                        <div class="dudas-content">
+                            <h2>¿TIENES MÁS DUDAS?</h2>
+                            <p>Escríbenos por WhatsApp<br>y te ayudamos.</p>
+                            <button class="btn-dudas-wa" id="btn-solicitahoy">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                                    <path
+                                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+                                </svg> ¡SOLICITA HOY!
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="electro-faq">
+            <div class="faq-container">
+                <h2>PREGUNTAS FRECUENTES</h2>
+                <div class="faq-grid">
+                    <!-- Columna Izquierda -->
+                    <div class="faq-col">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>¿Cuánto dinero puedo solicitar para un préstamo personal?</span>
+                                <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor"
+                                    stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </div>
+                            <div class="faq-answer">
+                                <p>El monto dependerá exclusivamente de la tasación de tu joya de oro. Evaluamos el peso
+                                    y los kilates para ofrecerte la máxima cantidad posible.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>¿Cuántas cuotas tengo para pagar mi préstamo?</span>
+                                <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor"
+                                    stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Ofrecemos contratos renovables cada 30 días. Puedes renovar tu contrato
+                                    indefinidamente mientras pagues el interés mensual.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>¿Dónde puedo pagar mi préstamo personal?</span>
+                                <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor"
+                                    stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Puedes realizar tus pagos mediante transferencia, Yape, depósitos en BCP e
+                                    Interbank, o presencialmente en nuestras oficinas.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>¿Qué es un préstamo prendario?</span>
+                                <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor"
+                                    stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Es un préstamo rápido en el que dejas un objeto de valor (en este caso, joyas de oro)
+                                    como garantía para recibir dinero en efectivo de inmediato.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>¿Qué objetos puedo usar como garantía?</span>
+                                <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor"
+                                    stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Para esta línea de crédito aceptamos joyas de oro de 18k y 21k, así como
+                                    relojes de alta gama y monedas de oro.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>¿Cómo se determina el valor de mi prenda?</span>
+                                <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor"
+                                    stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Contamos con tasadores expertos que evalúan el peso exacto, la pureza (kilataje) y el
+                                    valor actual del oro en el mercado internacional.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Columna Derecha -->
+                    <div class="faq-col">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>¿Qué tan rápido puedo obtener mi dinero?</span>
+                                <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor"
+                                    stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </div>
+                            <div class="faq-answer">
+                                <p>¡De forma inmediata! Una vez tasada tu prenda y firmado el contrato, recibes el
+                                    efectivo o la transferencia bancaria al instante.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>¿Qué pasa si no puedo pagar mi préstamo?</span>
+                                <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor"
+                                    stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Ofrecemos facilidades y períodos de gracia. Sin embargo, si decides no pagar, la
+                                    prenda queda a disposición de la empresa para saldar la deuda, sin afectar tu
+                                    historial crediticio.</p>
+                            </div>
+                        </div>
+                        <!--<div class="faq-item">
+                            <div class="faq-question">
+                                <span>¿Mis prendas están seguras con ustedes?</span>
+                                <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor"
+                                    stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Absolutamente. Contamos con bóvedas de alta seguridad, vigilancia 24/7 y pólizas de
+                                    seguro para proteger todas las prendas en custodia.</p>
+                            </div>
+                        </div>-->
+                        <!--<div class="faq-item">
+                            <div class="faq-question">
+                                <span>¿Puedo recuperar mi prenda antes de terminar de pagar?</span>
+                                <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor"
+                                    stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Sí, puedes cancelar el total de tu préstamo más los intereses acumulados hasta la
+                                    fecha en cualquier momento y recuperar tu joya al instante.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>¿Qué documentos necesito para el préstamo prendario?</span>
+                                <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor"
+                                    stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Solo necesitas presentar tu Documento Nacional de Identidad (DNI) vigente o Carnet de
+                                    Extranjería, y ser mayor de 18 años.</p>
+                            </div>
+                        </div>-->
+                        <!--<div class="faq-item">
+                            <div class="faq-question">
+                                <span>¿Cuáles son las tasas de interés?</span>
+                                <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor"
+                                    stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Ofrecemos una de las tasas más competitivas del mercado, actualmente en 7.9% mensual
+                                    para créditos con garantía de joyas de oro.</p>
+                            </div>
+                        </div>-->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>¿Necesito historial crediticio para acceder al préstamo?</span>
+                                <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor"
+                                    stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </div>
+                            <div class="faq-answer">
+                                <p>No, es necesario contar con historial crediticio, ya que el préstamo se otorga en
+                                    función
+                                    de la garantía presentada. El artículo respalda directamente la obligación asumida
+                                    por
+                                    el cliente.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>¿Mis prendas están seguros en CES VALI?</span>
+                                <svg class="faq-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor"
+                                    stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Si, CES VALI asume la obligación de custodiar y conservar los bienes entregados en
+                                    garantía durante la vigencia del contrato. En caso de périda o daño bajo custodia de
+                                    la
+                                    empresa, se aplican las responsabilidades previstas contractualmente.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <div id="footer-container"></div>
+
+</body>
+<script>
+    const btnTasar = document.getElementById('btn-tasar');
+    const summaryCard = document.getElementById('summary-card');
+    const btnSolicitar = document.getElementById('btn-solicitar');
+
+    btnTasar.addEventListener('click', () => {
+        summaryCard.style.display = 'block';
+        btnSolicitar.style.display = 'block';
+        btnTasar.style.display = 'none';
+    });
+
+    btnSolicitar.addEventListener('click', () => {
+
+        const kilates = document.getElementById('calc-kilates').value;
+        const peso = document.getElementById('calc-peso').value;
+        const monto = document.getElementById('calc-prestamo-joyas').textContent;
+
+        const mensaje = `Hola, quisiera solicitar un préstamo dejando en garantía oro de ${kilates}k con un peso de ${peso} gramos. El monto prevevaluado es ${monto}.`;
+
+        const numero = '51903182890';
+
+        const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+
+        window.open(url, '_blank');
+    });
+    const btnSolicitahoy = document.getElementById('btn-solicitahoy');
+
+    btnSolicitahoy.addEventListener('click', () => {
+
+        const mensaje = `Hola, tengo dudas para empeñar mis joyas. ¿podrían asesorarme?`;
+
+        const numero = '51903182890';
+
+        const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+
+        window.open(url, '_blank');
+    });
+</script>
+
+</html>

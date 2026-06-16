@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VALI</title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Poppins:wght@300;400;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/components.js" defer></script>
+  <style>
+    .slide-1 {
+      background-image: url('assets/img/HOME/banner_home_1.webp');
+    }
+
+    .slide-2 {
+      background-image: url('assets/img/EXPERIENCIA VALI/completo.webp');
+    }
+
+    @media (max-width: 991px) {
+      .carousel-slide {}
+
+
+
+      .slide-1 {
+        background-image: url('assets/img/HOME/MOBILE/VFMOVIL_bannehome1copia.webp');
+        background-position: center 22%;
+      }
+
+      .slide-2 {
+        background-image: url('assets/img/EXPERIENCIA VALI/vistacelular.webp');
+        background-position: center 25%;
+
+      }
+
+      /* Slide 2 defaults to desktop image since we don't have a mobile version yet */
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="header-container"></div>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <!-- Carousel Backgrounds -->
+    <div class="hero-carousel">
+      <div class="carousel-slide active slide-1"></div>
+      <div class="carousel-slide slide-2"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-copy">
+        <div class="hero-buttons">
+          <a class="btn-outline" href="#productos">SOLICITA TU PRÉSTAMO</a>
+          <a class="btn-outline" id="btn-conoce-funciona" href="#proceso">CONOCE CÓMO FUNCIONA</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+      </div>
+    </div>
+
+    <!-- Carousel Indicators -->
+    <div class="hero-indicators">
+      <span class="dot active" data-slide="0"></span>
+      <span class="dot" data-slide="1"></span>
+    </div>
+  </section>
+
+  <!-- BENEFICIOS -->
+  <section class="benefits reveal" id="nosotros">
+    <p class="subtitle">TU MEJOR OPCIÓN, CUANDO MÁS LO NECESITAS</p>
+    <h2>¿POR QUÉ VALI?</h2>
+
+    <div class="cards">
+
+      <div class="card blue">
+        <span class="num">01</span>
+        <div class="card-icon">
+          <img class="" src="assets/icons/__icono_reloj.svg" alt="">
+        </div>
+        <h3>OBTÉN DINERO AL INSTANTE</h3>
+        <p>Sin trámites complicados. Evaluamos y te prestamos</p>
+      </div>
+
+      <div class="card yellow">
+        <span class="num">02</span>
+        <div class="card-icon">
+          <img class="" src="assets/icons/__icono_candado.svg" alt="">
+        </div>
+        <h3>TUS ARTÍCULOS ESTÁN PROTEGIDOS</h3>
+        <p>Guardamos tus pertenencias en lugares seguros</p>
+      </div>
+
+      <div class="card orange">
+        <span class="num">03</span>
+        <div class="card-icon">
+          <img class="" src="assets/icons/__icono_ubi.svg" alt="">
+        </div>
+        <h3>ESTAMOS CERCA DE TI</h3>
+        <p>Visítanos en nuestras sucursales</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROCESO -->
+  <section class="process reveal" id="proceso">
+    <h2>¿CÓMO FUNCIONA?</h2>
+
+    <div class="steps">
+
+      <div class="step">
+        <div class="circle">
+          <img src="assets/icons/__icono_diamante.svg" width="60" height="60">
+        </div>
+        <span class="step-num">01</span>
+        <h3>TRAE TU GARANTÍA</h3>
+        <p>Acércate a nuestra<br>agencia más cercana</p>
+      </div>
+
+      <div class="arrow">
+        <img src="assets/icons/__ICONO_FLECHA.svg" width="60" height="60">
+      </div>
+
+      <div class="step">
+        <div class="circle">
+          <img src="assets/icons/__icono_hoja.svg" width="60" height="60">
+        </div>
+        <span class="step-num">02</span>
+        <h3>EVALUAMOS AL INSTANTE</h3>
+        <p>Revisamos y valorizamos<br>tu garantía</p>
+      </div>
+
+      <div class="arrow">
+        <img src="assets/icons/__ICONO_FLECHA.svg" width="60" height="60">
+      </div>
+
+      <div class="step">
+        <div class="circle">
+          <img src="assets/icons/__icono_manos.svg" width="60" height="60">
+        </div>
+        <span class="step-num">03</span>
+        <h3>ACEPTAS LA PROPUESTA</h3>
+        <p>Tú decides el monto y<br>plazo del préstamo</p>
+      </div>
+
+      <div class="arrow">
+        <img src="assets/icons/__ICONO_FLECHA.svg" width="60" height="60">
+      </div>
+
+      <div class="step">
+        <div class="circle">
+          <img src="assets/icons/__ICONO_DINERO.svg" width="60" height="60">
+        </div>
+        <span class="step-num">04</span>
+        <h3>RECIBES TU DINERO</h3>
+        <p>Dinero en efectivo al<br>instante</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SIMULADOR -->
+  <section class="simulator reveal" id="productos">
+    <div class="simulator-top">
+      <div class="simulator-copy">
+        <span class="simulator-label">SIMULADOR EXPRESS</span>
+        <h2>¿CUÁNTO DINERO NECESITAS HOY?</h2>
+        <div class="simulator-form">
+          <div class="form-group">
+            <label>Tipo de garantía</label>
+            <select id="sim-tipo-garantia">
+              <option value="">Selecciona</option>
+              <option value="Joyas">Joyas</option>
+              <option value="Electrodomésticos">Electrodomésticos</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label id="sim-label-monto">-</label>
+            <input type="text" id="sim-monto" placeholder="" />
+          </div>
+          <div class="form-group" id="group-sim-modelo" style="display: none;">
+            <label id="sim-label-modelo">Modelo</label>
+            <input type="text" id="sim-modelo" placeholder="Ej: pavilion 14" />
+          </div>
+          <button id="sim-btn-simular" class="btn-yellow">SIMULAR AHORA</button>
+        </div>
+        <p class="hint">Simulación referencial. Monto final sujeto a evaluación.</p>
+      </div>
+      <div class="simulator-image">
+        <img src="assets/img/HOME/__personaje_calculadora.webp" alt="Simulador VALI">
+      </div>
+    </div>
+
+    <div class="simulator-divider">
+      <svg viewBox="0 0 40 20" width="40" height="20" fill="none" stroke="#ffffff" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="2 18 20 2 38 18"></polyline>
+      </svg>
+    </div>
+
+    <div class="simulator-cards">
+      <div class="product card-joyas">
+        <img src="assets/img/HOME/__minibannerjoyas.webp" alt="Garantía en joyas">
+        <div class="overlay">
+          <!--<h3>GARANTÍA EN JOYAS</h3>
+          <ul>
+            <li><span class="chevron">&gt;</span> Mayor valorización</li>
+            <li><span class="chevron">&gt;</span> Tasas preferenciales</li>
+            <li><span class="chevron">&gt;</span> Ideal para tus joyas</li>
+          </ul>-->
+          <a class="btn-yellow" href="producto_joya">CALCULAR PRÉSTAMO</a>
+        </div>
+      </div>
+      <div class="product card-electro">
+        <img src="assets/img/HOME/__minibannerelectro.webp" alt="Garantía en electro">
+        <div class="overlay">
+          <!--<h3>GARANTÍA EN ELECTRO</h3>
+          <ul>
+            <li><span class="chevron">&gt;</span> Rápido y práctico</li>
+            <li><span class="chevron">&gt;</span> Aceptamos diversos equipos</li>
+            <li><span class="chevron">&gt;</span> Ideal para liquidez inmediata</li>
+          </ul>-->
+          <a class="btn-yellow" href="producto_electro">CALCULAR PRÉSTAMO</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <div id="testimonios-container"></div>
+
+  <div id="footer-container"></div>
+
+  <script>
+    // Lógica del Carrusel del Hero
+    document.addEventListener('DOMContentLoaded', () => {
+      const slides = document.querySelectorAll('.carousel-slide');
+      const dots = document.querySelectorAll('.hero-indicators .dot');
+      if (slides.length > 0) {
+        let currentSlide = 0;
+        let slideInterval;
+
+        const goToSlide = (index) => {
+          slides[currentSlide].classList.remove('active');
+          if (dots[currentSlide]) dots[currentSlide].classList.remove('active');
+          currentSlide = (index + slides.length) % slides.length;
+          slides[currentSlide].classList.add('active');
+          if (dots[currentSlide]) dots[currentSlide].classList.add('active');
+
+          const btnConoce = document.getElementById('btn-conoce-funciona');
+          if (btnConoce) {
+            btnConoce.href = currentSlide === 0 ? '#proceso' : 'experiencia.html';
+          }
+        };
+
+        const nextSlide = () => goToSlide(currentSlide + 1);
+        const prevSlide = () => goToSlide(currentSlide - 1);
+
+        const startInterval = () => {
+          slideInterval = setInterval(nextSlide, 5000);
+        };
+
+        const resetInterval = () => {
+          clearInterval(slideInterval);
+          startInterval();
+        };
+
+        startInterval();
+
+        // Hacer clickeables los puntos
+        dots.forEach((dot, index) => {
+          dot.addEventListener('click', () => {
+            goToSlide(index);
+            resetInterval();
+          });
+        });
+
+        // Swipe events para celular
+        const heroCarousel = document.querySelector('.hero-carousel');
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        if (heroCarousel) {
+          heroCarousel.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+          }, { passive: true });
+
+          heroCarousel.addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+          }, { passive: true });
+        }
+
+        const handleSwipe = () => {
+          const swipeThreshold = 50;
+          if (touchEndX < touchStartX - swipeThreshold) {
+            nextSlide(); // Swipe izquierda
+            resetInterval();
+          }
+          if (touchEndX > touchStartX + swipeThreshold) {
+            prevSlide(); // Swipe derecha
+            resetInterval();
+          }
+        };
+      }
+      // Lógica del simulador
+      const simTipoGarantia = document.getElementById('sim-tipo-garantia');
+      const simLabelMonto = document.getElementById('sim-label-monto');
+      const simMonto = document.getElementById('sim-monto');
+      const simBtnSimular = document.getElementById('sim-btn-simular');
+      const groupSimModelo = document.getElementById('group-sim-modelo');
+      const simModelo = document.getElementById('sim-modelo');
+
+      if (simTipoGarantia && simLabelMonto && simBtnSimular) {
+
+        simTipoGarantia.addEventListener('change', (e) => {
+          const val = e.target.value;
+
+          if (val === 'Joyas') {
+            simLabelMonto.textContent = 'Gramos';
+            simMonto.setAttribute('placeholder', 'Ej: 200');
+            simMonto.value = ''; // Limpiar al cambiar
+            if (groupSimModelo) groupSimModelo.style.display = 'none';
+          } else if (val === 'Electrodomésticos') {
+            simLabelMonto.textContent = 'Producto';
+            simMonto.setAttribute('placeholder', 'Ej: Laptop');
+            simMonto.value = ''; // Limpiar al cambiar
+            if (groupSimModelo) groupSimModelo.style.display = 'flex';
+          } else {
+            simLabelMonto.textContent = '-';
+            simMonto.setAttribute('placeholder', '');
+            if (groupSimModelo) groupSimModelo.style.display = 'none';
+          }
+        });
+
+        // Restringir a solo números si es Joyas
+        simMonto.addEventListener('input', function () {
+          if (simTipoGarantia.value === 'Joyas') {
+            this.value = this.value.replace(/[^0-9.]/g, ''); // Solo números y punto decimal
+          }
+        });
+
+        simBtnSimular.addEventListener('click', () => {
+
+          const tipo = simTipoGarantia.value;
+          const monto = simMonto ? simMonto.value.trim() : '';
+          const modelo = simModelo && groupSimModelo.style.display !== 'none' ? simModelo.value.trim() : '';
+
+          if (!tipo) {
+            alert('Por favor, selecciona un tipo de garantía.');
+            return;
+          }
+
+          if (!monto) {
+            alert('Por favor, rellene todos los campos requeridos.');
+            return;
+          }
+
+          let mensaje = '';
+
+          if (tipo === 'Joyas') {
+            mensaje = `Hola, quisiera simular un préstamo dejando en garantía ${tipo} de ${monto} gramos.`;
+          } else if (tipo === 'Electrodomésticos') {
+            let productoStr = monto;
+            if (modelo) {
+              productoStr += ` modelo ${modelo}`;
+            }
+            mensaje = `Hola, quisiera simular un préstamo dejando en garantía el siguiente electrodoméstico: ${productoStr}.`;
+          } else {
+            mensaje = `Hola, quisiera simular un préstamo de ${monto}.`;
+          }
+          const numero = '51903182890';
+          const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+
+          window.open(url, '_blank');
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>

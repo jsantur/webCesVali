@@ -1,0 +1,30 @@
+[
+    {
+        "id": 4,
+        "nombre": "Denis",
+        "texto": "&quot;La atención es rápida, resolvió un tema financiero y las tasas están al alcance del cliente&quot;",
+        "estrellas": 5,
+        "foto": "uploads\/testimonios\/1779669558_fotosytesti-54.webp"
+    },
+    {
+        "id": 3,
+        "nombre": "Dannae",
+        "texto": "&quot;Mi experiencia en VALI fue muy buena, me atendieron súper rápido, tienen muy buenos beneficios y lo mejor es que mi 4to mes no pago intereses&quot;",
+        "estrellas": 5,
+        "foto": "uploads\/testimonios\/1779669491_fotosytesti-52.webp"
+    },
+    {
+        "id": 2,
+        "nombre": "Jesús",
+        "texto": "&quot;Los asesores me atendieron súper bien y me sentí en confianza de dejar mis pertenencias en VALI&quot;",
+        "estrellas": 5,
+        "foto": "uploads\/testimonios\/1779669405_fotosytesti-50.webp"
+    },
+    {
+        "id": 1,
+        "nombre": "Yanet",
+        "texto": "&quot;Desde que ingresé a VALI, me sentí en confianza con su personal administrativo que es muy amable en su atención y me han solucionado mis problemas&quot;",
+        "estrellas": 5,
+        "foto": "uploads\/testimonios\/1779669328_fotosytesti-48.webp"
+    }
+]

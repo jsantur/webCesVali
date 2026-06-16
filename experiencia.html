@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiencia VALI</title>
+
+    <!-- Fuentes -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Poppins:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;700;800&family=Bebas+Neue&display=swap"
+        rel="stylesheet">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/experiencia.css">
+
+    <!-- Scripts -->
+    <script src="js/components.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Header Dinámico -->
+    <div id="header-container"></div>
+
+    <main>
+        <!-- HERO EXPERIENCIA VALI -->
+        <section class="exp-hero">
+            <div class="exp-hero-container">
+                <div class="exp-hero-copy">
+                    <!--<h1>SER CLIENTE VALI <br><span>TIENE BENEFICIOS<br>REALES</span></h1>
+                    <p>Más que un préstamo, una experiencia<br>que te acompaña siempre.</p>-->
+                </div>
+                <a href="#beneficios" class="btn-outline">DESCUBRE MÁS <svg xmlns="http://www.w3.org/2000/svg"
+                        width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg></a>
+            </div>
+        </section>
+
+        <!-- SECCIÓN BENEFICIOS -->
+        <section class="exp-benefits" id="beneficios">
+            <div class="exp-benefits-container">
+
+                <div class="benefits-grid">
+                    <!-- Columna 1 -->
+                    <div class="b-col">
+                        <div class="b-card">
+                            <img src="assets/img/EXPERIENCIA VALI/EV__valiclub.webp" alt="ValiClub">
+                        </div>
+                        <div class="b-card">
+                            <img src="assets/img/EXPERIENCIA VALI/EV__ticket gold.webp" alt="Ticket Gold">
+                        </div>
+                    </div>
+
+                    <!-- Columna 2 -->
+                    <div class="b-col">
+                        <div class="b-card">
+                            <img src="assets/img/EXPERIENCIA VALI/EV__TLTP.webp" alt="Tu Lealtad Te Premia">
+                        </div>
+                        <div class="b-card">
+                            <img src="assets/img/EXPERIENCIA VALI/EV__gana recomen.png" alt="Gana por Recomendación">
+                        </div>
+                    </div>
+
+                    <!-- Columna 3 -->
+                    <div class="b-col">
+                        <div class="b-card">
+                            <img src="assets/img/EXPERIENCIA VALI/EV__4to interes.png" alt="4to Interés Gratis">
+                        </div>
+                        <div class="b-card">
+                            <img src="assets/img/EXPERIENCIA VALI/EV__marketplac.png" alt="Garantía Marketplace">
+                        </div>
+                    </div>
+
+                    <!-- Columna 4 (Centrada verticalmente) -->
+                    <div class="b-col col-center">
+                        <div class="b-card">
+                            <img src="assets/img/EXPERIENCIA VALI/EV__emprendedor.png" alt="Campaña Empeña Emprendedor">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call To Action (Únete) -->
+                <div class="exp-cta">
+                    <h2>En <strong>VALI</strong> no solo te prestamos dinero, te ayudamos a avanzar cuando más lo
+                        necesitas</h2>
+                    <button class="btn-unete" id="btn-solicitar">
+                        ÚNETE AHORA
+                        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5"
+                            fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </button>
+                    <div class="cta-line"></div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Dinámico -->
+    <div id="footer-container"></div>
+
+</body>
+<script>
+    const btnSolicitar = document.getElementById('btn-solicitar');
+
+    btnSolicitar.addEventListener('click', () => {
+
+
+
+        const mensaje = `Hola, quisiera conocer mas sobre la experiencia VALI`;
+
+        const numero = '51903182890';
+
+        const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+
+        window.open(url, '_blank');
+    });
+</script>
+
+</html>

@@ -1,0 +1,144 @@
+=================================================
+FECHA: 2026-05-23 21:39:28
+TIPO: RECLAMO
+DATOS PERSONALES:
+- Menor de edad: no
+- Nombres: Maria Emmy demo
+- Documento: dni - 14785236
+- Contacto: demo@demo.com | Cel: 123456789
+- Dirección: mario aguirre, tacna, tacna, tacna
+BIEN CONTRATADO:
+- Bien: electro
+- Descripción: sfsdfsfdsdfsfdsdfsfdsdfsdfsdfsdf
+DETALLE DEL RECLAMO/QUEJA:
+- Detalle: sdfsfsdfsdf
+- Pedido: sdfsdfsdf
+ARCHIVO ADJUNTO: uploads/1779565168_WEB_VALI_LIBRO_DE_RECL.pdf
+=================================================
+
+=================================================
+FECHA: 2026-06-02 08:13:44
+TIPO: RECLAMO
+DATOS PERSONALES:
+- Menor de edad: no
+- Nombres: Maria Emmy demo
+- Documento: dni - 14785236
+- Contacto: demo@demo.com | Cel: 123456789
+- Dirección: mario aguirre, Pariñas, Talara, Piura
+BIEN CONTRATADO:
+- Bien: electro
+- Descripción: paque a tiempo y no encontraron mi producto
+DETALLE DEL RECLAMO/QUEJA:
+- Detalle: no
+- Pedido: 89
+ARCHIVO ADJUNTO: uploads/1780380824_1779565168_WEB_VALI_LIBRO_DE_RECL.pdf
+=================================================
+
+=================================================
+FECHA: 2026-06-02 08:17:13
+TIPO: RECLAMO
+DATOS PERSONALES:
+- Menor de edad: no
+- Nombres: Apoyo demo
+- Documento: dni - 14785236
+- Contacto: demo@demo.com | Cel: 123456789
+- Dirección: mario aguirre, Pariñas, Talara, Piura
+BIEN CONTRATADO:
+- Bien: electro
+- Descripción: lop
+DETALLE DEL RECLAMO/QUEJA:
+- Detalle: kolp
+- Pedido: no se
+ARCHIVO ADJUNTO: Sin archivo adjunto
+=================================================
+
+=================================================
+FECHA: 2026-06-02 08:27:53
+TIPO: RECLAMO
+DATOS PERSONALES:
+- Menor de edad: no
+- Nombres: Apoyo demo
+- Documento: dni - 14785236
+- Contacto: demo@demo.com | Cel: 123456789
+- Dirección: mario aguirre, Pariñas, Talara, Piura
+BIEN CONTRATADO:
+- Bien: electro
+- Descripción: lop123
+DETALLE DEL RECLAMO/QUEJA:
+- Detalle: uio0213 ghjjm
+- Pedido: kjl
+ARCHIVO ADJUNTO: uploads/1780381673_1779565168_WEB_VALI_LIBRO_DE_RECL.pdf
+=================================================
+
+=================================================
+FECHA: 2026-06-02 08:43:51
+TIPO: RECLAMO
+DATOS PERSONALES:
+- Menor de edad: no
+- Nombres: Maria Emmy demo
+- Documento: dni - 14785236
+- Contacto: demo@demo.com | Cel: 123456789
+- Dirección: mario aguirre, Pariñas, Talara, Piura
+BIEN CONTRATADO:
+- Bien: electro
+- Descripción: ertertert
+DETALLE DEL RECLAMO/QUEJA:
+- Detalle: etetetert
+- Pedido: ertertet
+ARCHIVO ADJUNTO: uploads/1780382631_1779565168_WEB_VALI_LIBRO_DE_RECL.pdf
+=================================================
+
+=================================================
+FECHA: 2026-06-02 08:52:17
+TIPO: RECLAMO
+DATOS PERSONALES:
+- Menor de edad: no
+- Nombres: especialista demo
+- Documento: dni - 14785236
+- Contacto: demo@demo.com | Cel: 987456321
+- Dirección: mario aguirre, Pariñas, Talara, Piura
+BIEN CONTRATADO:
+- Bien: electro
+- Descripción: nose
+DETALLE DEL RECLAMO/QUEJA:
+- Detalle: nose
+- Pedido: nose
+ARCHIVO ADJUNTO: uploads/1780383137_1779565168_WEB_VALI_LIBRO_DE_RECL.pdf
+=================================================
+
+=================================================
+FECHA: 2026-06-02 09:10:56
+TIPO: RECLAMO
+DATOS PERSONALES:
+- Menor de edad: no
+- Nombres: Apoyo demo
+- Documento: dni - 14785236
+- Contacto: demo@demo.com | Cel: 987456321
+- Dirección: mario aguirre, Pariñas, Talara, Piura
+BIEN CONTRATADO:
+- Bien: electro
+- Descripción: hola
+DETALLE DEL RECLAMO/QUEJA:
+- Detalle: demo
+- Pedido: demo
+ARCHIVO ADJUNTO: uploads/1780384256_1779565168_WEB_VALI_LIBRO_DE_RECL.pdf
+=================================================
+
+=================================================
+FECHA Y HORA: 2026-06-02 15:41:50
+TIPO: RECLAMO
+DATOS PERSONALES:
+- Menor de edad: no
+- Nombres: especialista demo
+- Documento: DNI - 14785236
+- E-mail: demo@demo.com | Cel: 987456321
+- Dirección: mario aguirre, Pariñas, Talara, Piura
+BIEN CONTRATADO:
+- Bien: electro
+- Descripción: desconforme
+DETALLE DEL RECLAMO/QUEJA:
+- Detalle: desconforme
+- Pedido: desconforme
+ARCHIVO ADJUNTO: uploads/1780432910_1779565168_WEB_VALI_LIBRO_DE_RECL.pdf
+=================================================
+

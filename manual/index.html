@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manual CESVALI — Documentación Completa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+    <!-- Mobile Toggle -->
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+    </button>
+
+    <!-- Sidebar Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-mark">C</div>
+            <div class="logo-text">
+                <span class="logo-name">CESVALI</span>
+                <span class="logo-sub">Manual de Usuario y Administración</span>
+            </div>
+        </div>
+
+        <div class="search-wrap">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>
+            <input type="text" id="searchInput" placeholder="Buscar en el manual…" autocomplete="off" />
+        </div>
+
+        <nav class="sidebar-nav" id="sidebarNav">
+            <div class="nav-group">
+                <span class="nav-group-label">Introducción</span>
+                <a href="#introduccion" class="nav-link active">¿Qué es CESVALI?</a>
+                <a href="#arquitectura" class="nav-link">Arquitectura del Sistema</a>
+                <a href="#mapa-sitio" class="nav-link">Mapa del Sitio</a>
+            </div>
+            <div class="nav-group">
+                <span class="nav-group-label">Páginas Principales</span>
+                <a href="#inicio" class="nav-link">Página de Inicio (index.html)</a>
+                <a href="#experiencia" class="nav-link">Experiencia VALI</a>
+                <a href="#nosotros" class="nav-link">Nosotros</a>
+                <a href="#productos" class="nav-link">Productos (Garantías)</a>
+            </div>
+            <div class="nav-group">
+                <span class="nav-group-label">Calculadoras</span>
+                <a href="#calculadora-joyas" class="nav-link">Calculadora de Joyas</a>
+                <a href="#calculadora-electro" class="nav-link">Calculadora de Electrodomésticos</a>
+                <a href="#tasas-json" class="nav-link">Configuración de Tasas</a>
+            </div>
+            <div class="nav-group">
+                <span class="nav-group-label">Testimonios</span>
+                <a href="#testimonios-publico" class="nav-link">Testimonios (Público)</a>
+                <a href="#testimonios-admin" class="nav-link">Administración de Testimonios</a>
+            </div>
+            <div class="nav-group">
+                <span class="nav-group-label">Libro de Reclamaciones</span>
+                <a href="#reclamos-publico" class="nav-link">Formulario de Reclamos</a>
+                <a href="#reclamos-admin" class="nav-link">Gestión de Reclamos</a>
+            </div>
+            <div class="nav-group">
+                <span class="nav-group-label">Guías</span>
+                <a href="#usuario-final" class="nav-link">Manual del Usuario Final</a>
+                <a href="#admin-guide" class="nav-link">Manual del Administrador</a>
+            </div>
+            <div class="nav-group">
+                <span class="nav-group-label">Soporte</span>
+                <a href="#faq" class="nav-link">Preguntas Frecuentes</a>
+                <a href="#contacto" class="nav-link">Contacto Técnico</a>
+            </div>
+        </nav>
+
+        <div class="sidebar-footer">
+            <span>v2.0 — Junio 2026</span>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content" id="mainContent">
+
+        <!-- Top Bar -->
+        <header class="topbar">
+            <div class="breadcrumb" id="breadcrumb">Introducción / ¿Qué es CESVALI?</div>
+            <div class="topbar-actions">
+                <button class="btn-icon" id="themeToggle" title="Cambiar tema">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                </button>
+            </div>
+        </header>
+
+        <div class="content-body">
+            <div class="no-results" id="noResults">No se encontraron resultados para tu búsqueda.</div>
+
+            <!-- ─── INTRODUCCIÓN ─── -->
+            <section class="doc-section" id="introduccion" data-title="¿Qué es CESVALI?">
+                <div class="section-tag">Introducción</div>
+                <h1>¿Qué es CESVALI?</h1>
+                <p class="lead">CESVALI es una plataforma web especializada en préstamos con garantía de joyas y electrodomésticos, con más de 5 años de experiencia en el mercado peruano.</p>
+
+                <div class="info-cards">
+                    <div class="info-card accent-blue">
+                        <div class="info-icon">💎</div>
+                        <div>
+                            <strong>Garantías de Joyas</strong>
+                            <p>Préstamos con garantía de oro de 14k, 18k, 21k y 24k con tasas preferenciales.</p>
+                        </div>
+                    </div>
+                    <div class="info-card accent-green">
+                        <div class="info-icon">📺</div>
+                        <div>
+                            <strong>Garantías de Electrodomésticos</strong>
+                            <p>Aceptamos televisores, laptops, consolas, celulares y más en buen estado.</p>
+                        </div>
+                    </div>
+                    <div class="info-card accent-amber">
+                        <div class="info-icon">🚀</div>
+                        <div>
+                            <strong>Experiencia VALI</strong>
+                            <p>Beneficios exclusivos para clientes recurrentes: ValiClub, Ticket Gold, y más.</p>
+                        </div>
+                    </div>
+                    <div class="info-card accent-purple">
+                        <div class="info-icon">📋</div>
+                        <div>
+                            <strong>Libro de Reclamaciones</strong>
+                            <p>Cumplimiento total con la normativa peruana (INDECOPI) para atender consultas y quejas.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Objetivo del Manual</h2>
+                <p>Este documento cubre la operación completa del sistema: desde la arquitectura técnica hasta el uso diario por parte del administrador y del usuario final. Está organizado en secciones independientes para que puedas saltar directamente a lo que necesites.</p>
+            </section>
+
+            <!-- ─── ARQUITECTURA ─── -->
+            <section class="doc-section" id="arquitectura" data-title="Arquitectura del Sistema">
+                <div class="section-tag">Introducción</div>
+                <h1>Arquitectura del Sistema</h1>
+                <p class="lead">CESVALI utiliza un modelo Cliente-Servidor ligero, basado en PHP nativo y almacenamiento local de archivos, lo que elimina la necesidad de un motor de base de datos.</p>
+
+                <div class="arch-diagram">
+                    <div class="arch-layer">
+                        <div class="arch-label">CLIENTE</div>
+                        <div class="arch-boxes">
+                            <div class="arch-box browser">🌐 Navegador Web<br><small>HTML · CSS · JS</small></div>
+                        </div>
+                    </div>
+                    <div class="arch-arrow">↕ HTTP</div>
+                    <div class="arch-layer">
+                        <div class="arch-label">SERVIDOR</div>
+                        <div class="arch-boxes">
+                            <div class="arch-box server">⚙️ PHP 8.x<br><small>Lógica de negocio</small></div>
+                        </div>
+                    </div>
+                    <div class="arch-arrow">Lectura / Escritura</div>
+                    <div class="arch-layer">
+                        <div class="arch-label">ALMACENAMIENTO</div>
+                        <div class="arch-boxes">
+                            <div class="arch-box storage">📄 JSON<br><small>Testimonios & Tasas</small></div>
+                            <div class="arch-box storage">📝 TXT<br><small>Reclamos</small></div>
+                            <div class="arch-box storage">🖼️ Uploads<br><small>Imágenes y Archivos</small></div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Stack Tecnológico</h2>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>Capa</th><th>Tecnología</th><th>Rol</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Frontend</td><td>HTML5 / CSS3 / JavaScript ES6</td><td>Interfaz de usuario, calculadoras, animaciones</td></tr>
+                            <tr><td>Backend</td><td>PHP 8.x</td><td>Procesamiento de formularios, envío de correos</td></tr>
+                            <tr><td>Datos</td><td>JSON / TXT</td><td>Persistencia sin base de datos</td></tr>
+                            <tr><td>Estilos</td><td>CSS Personalizado</td><td>Diseño responsivo y moderno</td></tr>
+                            <tr><td>Email</td><td>PHPMailer</td><td>Envío de notificaciones de reclamos</td></tr>
+                            <tr><td>Servidor</td><td>Apache / PHP Built-in Server</td><td>Entorno de ejecución</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2>Estructura de Archivos</h2>
+                <div class="code-block">
+                    <div class="code-header"><span>Estructura de Directorios</span></div>
+                    <pre><code>webCesVali/
+├── assets/
+│   ├── fonts/           # Tipografías
+│   ├── icons/           # Íconos SVG
+│   ├── img/             # Imágenes del sitio
+│   └── pdf/             # Términos y condiciones
+├── css/                 # Estilos CSS
+├── data/
+│   ├── tasas.json       # Tasas de oro y interés
+│   └── testimonios.json # Testimonios de clientes
+├── js/                  # Scripts JavaScript
+├── manual/              # Este manual
+├── PHPMailer/           # Librería para envío de correos
+├── ubigeos/             # Datos geográficos de Perú
+├── uploads/             # Archivos subidos por usuarios
+├── admin_testimonios.php
+├── api_testimonios.php
+├── guardar_reclamo.php
+├── header.html
+├── footer.html
+├── index.html
+├── experiencia.html
+├── nosotros.html
+├── producto_electro.html
+├── producto_joyas.html
+└── testimonios.html</code></pre>
+                </div>
+            </section>
+
+            <!-- ─── MAPA DEL SITIO ─── -->
+            <section class="doc-section" id="mapa-sitio" data-title="Mapa del Sitio">
+                <div class="section-tag">Introducción</div>
+                <h1>Mapa del Sitio</h1>
+                <p class="lead">Todas las páginas y funcionalidades disponibles en el sitio web de CESVALI.</p>
+
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>Página</th><th>Ruta</th><th>Descripción</th><th>Tipo de Acceso</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Inicio</strong></td><td>index.html</td><td>Página principal con banner, beneficios, calculadora express, simulador y testimonios</td><td>Público</td></tr>
+                            <tr><td><strong>Experiencia VALI</strong></td><td>experiencia.html</td><td>Beneficios exclusivos para clientes: ValiClub, Ticket Gold, Tu Lealtad Te Premia, etc.</td><td>Público</td></tr>
+                            <tr><td><strong>Nosotros</strong></td><td>nosotros.html</td><td>Información de la empresa, misión, visión y principios</td><td>Público</td></tr>
+                            <tr><td><strong>Garantía Joyas</strong></td><td>producto_joyas.html</td><td>Calculadora de préstamos para joyas de oro</td><td>Público</td></tr>
+                            <tr><td><strong>Garantía Electro</strong></td><td>producto_electro.html</td><td>Calculadora de préstamos para electrodomésticos</td><td>Público</td></tr>
+                            <tr><td><strong>Testimonios</strong></td><td>testimonios.html</td><td>Sección de testimonios de clientes</td><td>Público</td></tr>
+                            <tr><td><strong>Libro de Reclamaciones</strong></td><td>libro_reclamaciones.html</td><td>Formulario oficial de reclamos y quejas</td><td>Público</td></tr>
+                            <tr><td><strong>Admin Testimonios</strong></td><td>admin_testimonios.php</td><td>Panel de administración de testimonios</td><td>Protegido</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- ─── PÁGINA DE INICIO ─── -->
+            <section class="doc-section" id="inicio" data-title="Página de Inicio">
+                <div class="section-tag">Páginas Principales</div>
+                <h1>Página de Inicio (index.html)</h1>
+                <p class="lead">La página principal es la cara de CESVALI y contiene múltiples secciones importantes.</p>
+
+                <h2>Secciones de la Página de Inicio</h2>
+                <ol class="steps">
+                    <li>
+                        <div class="step-num">1</div>
+                        <div>
+                            <strong>Hero Carrusel</strong>
+                            <p>Carrusel con 2 slides que cambian automáticamente cada 5 segundos. Incluye botones "Solicita tu préstamo" y "Conoce cómo funciona".</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step-num">2</div>
+                        <div>
+                            <strong>Beneficios</strong>
+                            <p>Tarjetas con los beneficios clave: dinero al instante, artículos protegidos, y cercanía.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step-num">3</div>
+                        <div>
+                            <strong>Cómo Funciona</strong>
+                            <p>Proceso en 4 pasos: trae tu garantía, evaluamos, aceptas la propuesta, recibes tu dinero.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step-num">4</div>
+                        <div>
+                            <strong>Simulador Express</strong>
+                            <p>Calculadora rápida para simular préstamos con garantía de joyas o electrodomésticos. Envía los datos directamente a WhatsApp.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step-num">5</div>
+                        <div>
+                            <strong>Tarjetas de Productos</strong>
+                            <p>Botones para acceder a las calculadoras de joyas y electrodomésticos.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step-num">6</div>
+                        <div>
+                            <strong>Testimonios</strong>
+                            <p>Carrusel dinámico de testimonios de clientes, cargado desde el archivo JSON.</p>
+                        </div>
+                    </li>
+                </ol>
+
+                <h2>Funcionalidades JavaScript</h2>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>Función</th><th>Descripción</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Carrusel Automático</td><td>Cambia slides cada 5 segundos, con dots para navegación manual</td></tr>
+                            <tr><td>Swipe en Móviles</td><td>Permite deslizar el carrusel con el dedo en dispositivos móviles</td></tr>
+                            <tr><td>Simulador Express</td><td>Valida campos, genera mensaje personalizado y abre WhatsApp</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- ─── EXPERIENCIA VALI ─── -->
+            <section class="doc-section" id="experiencia" data-title="Experiencia VALI">
+                <div class="section-tag">Páginas Principales</div>
+                <h1>Experiencia VALI</h1>
+                <p class="lead">Página que muestra todos los beneficios exclusivos para clientes recurrentes de CESVALI.</p>
+
+                <h2>Beneficios Incluidos</h2>
+                <div class="info-cards">
+                    <div class="info-card accent-blue">
+                        <div class="info-icon">🏆</div>
+                        <div>
+                            <strong>ValiClub</strong>
+                            <p>Programa de membresía para clientes frecuentes</p>
+                        </div>
+                    </div>
+                    <div class="info-card accent-green">
+                        <div class="info-icon">🎫</div>
+                        <div>
+                            <strong>Ticket Gold</strong>
+                            <p>Beneficios premium para clientes especiales</p>
+                        </div>
+                    </div>
+                    <div class="info-card accent-amber">
+                        <div class="info-icon">⭐</div>
+                        <div>
+                            <strong>Tu Lealtad Te Premia</strong>
+                            <p>Recompensas por la fidelidad del cliente</p>
+                        </div>
+                    </div>
+                    <div class="info-card accent-purple">
+                        <div class="info-icon">💰</div>
+                        <div>
+                            <strong>Gana por Recomendación</strong>
+                            <p>Beneficios por referir nuevos clientes</p>
+                        </div>
+                    </div>
+                    <div class="info-card accent-blue">
+                        <div class="info-icon">🎁</div>
+                        <div>
+                            <strong>4to Interés Gratis</strong>
+                            <p>Promoción especial en pagos</p>
+                        </div>
+                    </div>
+                    <div class="info-card accent-green">
+                        <div class="info-icon">🛒</div>
+                        <div>
+                            <strong>Marketplace</strong>
+                            <p>Ofertas especiales para clientes</p>
+                        </div>
+                    </div>
+                    <div class="info-card accent-amber">
+                        <div class="info-icon">🚀</div>
+                        <div>
+                            <strong>Emprende con VALI</strong>
+                            <p>Apoyo a emprendedores</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Botón "Únete Ahora"</h2>
+                <p>Al hacer clic, abre directamente WhatsApp con un mensaje predefinido para consultar sobre los beneficios de la Experiencia VALI.</p>
+            </section>
+
+            <!-- ─── NOSOTROS ─── -->
+            <section class="doc-section" id="nosotros" data-title="Nosotros">
+                <div class="section-tag">Páginas Principales</div>
+                <h1>Nosotros</h1>
+                <p class="lead">Página con información institucional de CESVALI.</p>
+
+                <h2>Secciones</h2>
+                <ol class="steps">
+                    <li>
+                        <div class="step-num">1</div>
+                        <div><strong>Hero Banner</strong> con imagen corporativa y sello de registro en la SBS</div>
+                    </li>
+                    <li>
+                        <div class="step-num">2</div>
+                        <div><strong>¿Quiénes Somos?</strong> — Historia y descripción de la empresa</div>
+                    </li>
+                    <li>
+                        <div class="step-num">3</div>
+                        <div><strong>Misión y Visión</strong> — Objetivos y propósito de la empresa</div>
+                    </li>
+                    <li>
+                        <div class="step-num">4</div>
+                        <div><strong>Nuestros Principios</strong> — Valores corporativos (confianza, enfoque en cliente, excelencia, etc.)</div>
+                    </li>
+                    <li>
+                        <div class="step-num">5</div>
+                        <div><strong>Testimonios</strong> — Carrusel de comentarios de clientes</div>
+                    </li>
+                </ol>
+            </section>
+
+            <!-- ─── PRODUCTOS ─── -->
+            <section class="doc-section" id="productos" data-title="Productos (Garantías)">
+                <div class="section-tag">Páginas Principales</div>
+                <h1>Productos (Garantías)</h1>
+                <p class="lead">CESVALI ofrece dos tipos principales de garantías para préstamos.</p>
+
+                <h2>1. Garantía de Joyas</h2>
+                <p>Aceptamos joyas de oro de 14k, 18k, 21k y 24k. La tasación se basa en el peso y la pureza del oro.</p>
+
+                <h2>2. Garantía de Electrodomésticos</h2>
+                <p>Aceptamos una amplia variedad de electrodomésticos y dispositivos electrónicos en buen estado, incluyendo:</p>
+                <ul class="feature-list">
+                    <li>Televisores (Smart TVs)</li>
+                    <li>Laptops y computadoras</li>
+                    <li>Consolas de videojuegos</li>
+                    <li>Cámaras fotográficas</li>
+                    <li>Celulares modernos</li>
+                    <li>Y más electrodomésticos</li>
+                </ul>
+            </section>
+
+            <!-- ─── CALCULADORA DE JOYAS ─── -->
+            <section class="doc-section" id="calculadora-joyas" data-title="Calculadora de Joyas">
+                <div class="section-tag">Calculadoras</div>
+                <h1>Calculadora de Joyas</h1>
+                <p class="lead">Herramienta para simular préstamos con garantía de joyas de oro.</p>
+
+                <h2>Características</h2>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>Campo</th><th>Descripción</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Oro (Pureza)</strong></td><td>Select para elegir 14k, 18k, 21k o 24k</td></tr>
+                            <tr><td><strong>Peso (Gramos)</strong></td><td>Input numérico para el peso en gramos</td></tr>
+                            <tr><td><strong>Moneda</strong></td><td>Soles peruanos (PEN)</td></tr>
+                            <tr><td><strong>Plazo</strong></td><td>30 días (renovable)</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2>Cálculos Realizados</h2>
+                <div class="code-block">
+                    <div class="code-header"><span>Fórmulas</span></div>
+                    <pre><code>Monto del préstamo = Peso × Tasa por gramo según kilataje
+Interés = Monto del préstamo × Tasa de interés
+Total a pagar = Monto del préstamo + Interés</code></pre>
+                </div>
+
+                <h2>Flujo de Uso</h2>
+                <ol class="steps">
+                    <li><div class="step-num">1</div><div>Elige la pureza del oro (14k, 18k, 21k o 24k)</div></li>
+                    <li><div class="step-num">2</div><div>Ingresa el peso en gramos</div></li>
+                    <li><div class="step-num">3</div><div>Haz clic en "Continuar" para ver el resumen</div></li>
+                    <li><div class="step-num">4</div><div>Haz clic en "Tasar Ahora" para enviar los datos a WhatsApp</div></li>
+                </ol>
+            </section>
+
+            <!-- ─── CALCULADORA DE ELECTRODOMÉSTICOS ─── -->
+            <section class="doc-section" id="calculadora-electro" data-title="Calculadora de Electrodomésticos">
+                <div class="section-tag">Calculadoras</div>
+                <h1>Calculadora de Electrodomésticos</h1>
+                <p class="lead">Herramienta para simular préstamos con garantía de electrodomésticos.</p>
+
+                <h2>Secciones</h2>
+                <ol class="steps">
+                    <li>
+                        <div class="step-num">1</div>
+                        <div>
+                            <strong>Tasar Artículo</strong>
+                            <p>Formulario para describir el artículo y enviar los datos a WhatsApp para tasación previa.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step-num">2</div>
+                        <div>
+                            <strong>Simular Préstamo</strong>
+                            <p>Si ya conoces el valor de tasación, puedes simular el préstamo directamente.</p>
+                        </div>
+                    </li>
+                </ol>
+
+                <h2>Parámetros de Cálculo</h2>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>Parámetro</th><th>Valor</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Tasa de interés mensual</td><td>12.9%</td></tr>
+                            <tr><td>Plazo</td><td>30 días (renovable)</td></tr>
+                            <tr><td>Métodos de pago</td><td>Yape, BCP, Interbank, o presencial</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- ─── CONFIGURACIÓN DE TASAS ─── -->
+            <section class="doc-section" id="tasas-json" data-title="Configuración de Tasas">
+                <div class="section-tag">Calculadoras</div>
+                <h1>Configuración de Tasas (data/tasas.json)</h1>
+                <p class="lead">Las tasas de oro y los intereses se configuran dinámicamente en un archivo JSON.</p>
+
+                <h2>Estructura del Archivo</h2>
+                <div class="code-block">
+                    <div class="code-header"><span>data/tasas.json</span><button class="copy-btn" data-target="code-tasas">Copiar</button></div>
+                    <pre id="code-tasas"><code>{
+  "tasas_oro_por_gramo": {
+    "14": 303.98,
+    "18": 500,
+    "21": 550,
+    "24": 524.10
+  },
+  "interes_joyas": 0.079
+}</code></pre>
+                </div>
+
+                <h2>Cómo Actualizar las Tasas</h2>
+                <ol class="steps">
+                    <li><div class="step-num">1</div><div>Conecta al servidor via FTP o panel de hosting</div></li>
+                    <li><div class="step-num">2</div><div>Abre el archivo <code>data/tasas.json</code></div></li>
+                    <li><div class="step-num">3</div><div>Modifica los valores numéricos según sea necesario</div></li>
+                    <li><div class="step-num">4</div><div>Guarda el archivo</div></li>
+                    <li><div class="step-num">5</div><div>Los cambios se reflejarán inmediatamente en las calculadoras</div></li>
+                </ol>
+
+                <div class="callout callout-warning">
+                    <div class="callout-icon">⚠️</div>
+                    <div>
+                        <strong>Importante:</strong> Asegúrate de que el JSON sea válido. Usa <a href="https://jsonlint.com" target="_blank">JSONLint</a> para validar la sintaxis.
+                    </div>
+                </div>
+            </section>
+
+            <!-- ─── TESTIMONIOS PÚBLICO ─── -->
+            <section class="doc-section" id="testimonios-publico" data-title="Testimonios (Público)">
+                <div class="section-tag">Testimonios</div>
+                <h1>Testimonios (Público)</h1>
+                <p class="lead">Sección que muestra los testimonios de clientes aprobados en un carrusel.</p>
+
+                <h2>Características</h2>
+                <ul class="feature-list">
+                    <li>Carrusel responsivo que se adapta a móviles y escritorio</li>
+                    <li>Botones de navegación (anterior/siguiente)</li>
+                    <li>Carga dinámica desde <code>data/testimonios.json</code></li>
+                    <li>Muestra nombre, texto del testimonio y estrellas</li>
+                    <li>Foto opcional del cliente</li>
+                </ul>
+
+                <h2>Estructura del Archivo JSON</h2>
+                <div class="code-block">
+                    <div class="code-header"><span>data/testimonios.json</span></div>
+                    <pre><code>[
+  {
+    "id": 1,
+    "nombre": "María G.",
+    "texto": "Excelente servicio, rápido y seguro.",
+    "estrellas": 5,
+    "foto": "uploads/testimonios/1234567890_foto.jpg"
+  }
+]</code></pre>
+                </div>
+            </section>
+
+            <!-- ─── ADMINISTRACIÓN DE TESTIMONIOS ─── -->
+            <section class="doc-section" id="testimonios-admin" data-title="Administración de Testimonios">
+                <div class="section-tag">Testimonios</div>
+                <h1>Administración de Testimonios</h1>
+                <p class="lead">Panel para agregar y eliminar testimonios desde la interfaz web.</p>
+
+                <h2>Acceso al Panel</h2>
+                <p>URL: <code>admin_testimonios.php</code></p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>Credencial</th><th>Valor</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Contraseña</td><td><code>vali123</code></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2>Funcionalidades del Panel</h2>
+                <ol class="steps">
+                    <li><div class="step-num">1</div><div><strong>Inicio de Sesión</strong> — Ingresa la contraseña para acceder</div></li>
+                    <li><div class="step-num">2</div><div><strong>Agregar Testimonio</strong> — Llena el formulario con nombre, texto, estrellas y foto opcional</div></li>
+                    <li><div class="step-num">3</div><div><strong>Eliminar Testimonio</strong> — Haz clic en "Eliminar" para borrar un testimonio</div></li>
+                    <li><div class="step-num">4</div><div><strong>Ver Listado</strong> — Muestra todos los testimonios existentes</div></li>
+                </ol>
+
+                <h2>Cómo Cambiar la Contraseña</h2>
+                <ol class="steps">
+                    <li><div class="step-num">1</div><div>Abre el archivo <code>admin_testimonios.php</code></div></li>
+                    <li><div class="step-num">2</div><div>Busca la línea: <code>$PASSWORD = 'vali123';</code></div></li>
+                    <li><div class="step-num">3</div><div>Cambia <code>'vali123'</code> por tu nueva contraseña</div></li>
+                    <li><div class="step-num">4</div><div>Guarda el archivo</div></li>
+                </ol>
+            </section>
+
+            <!-- ─── FORMULARIO DE RECLAMOS ─── -->
+            <section class="doc-section" id="reclamos-publico" data-title="Formulario de Reclamos">
+                <div class="section-tag">Libro de Reclamaciones</div>
+                <h1>Formulario de Reclamos (Público)</h1>
+                <p class="lead">Formulario oficial cumpliendo con la normativa de INDECOPI para que los clientes presenten reclamos y quejas.</p>
+
+                <h2>Secciones del Formulario</h2>
+                <ol class="steps">
+                    <li>
+                        <div class="step-num">1</div>
+                        <div>
+                            <strong>Datos Personales</strong>
+                            <p>Nombres, apellidos, tipo y número de documento, correo, celular, departamento, provincia, distrito y dirección.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step-num">2</div>
+                        <div>
+                            <strong>Bien Contratado</strong>
+                            <p>Tipo de bien (electro, joya, marketplace) y descripción.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step-num">3</div>
+                        <div>
+                            <strong>Detalle del Reclamo/Queja</strong>
+                            <p>Tipo (reclamo o queja), detalle y pedido del cliente.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step-num">4</div>
+                        <div>
+                            <strong>Adjuntos</strong>
+                            <p>Archivo opcional (PDF, JPG, PNG) hasta 5MB.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step-num">5</div>
+                        <div>
+                            <strong>Checkbox de Aceptación</strong>
+                            <p>Aceptación de la política de privacidad (obligatorio).</p>
+                        </div>
+                    </li>
+                </ol>
+
+                <h2>Ubigeos Geográficos</h2>
+                <p>El formulario incluye menús desplegables dinámicos para departamento, provincia y distrito, cargados desde los archivos JSON en la carpeta <code>ubigeos/</code>.</p>
+
+                <h2>Al Enviar el Formulario</h2>
+                <ul class="feature-list">
+                    <li>Los datos se guardan en <code>reclamos.txt</code> en la raíz del sitio</li>
+                    <li>Se envía un correo electrónico con todos los detalles a los correos configurados</li>
+                    <li>Se sube el archivo adjunto a la carpeta <code>uploads/</code></li>
+                    <li>Se muestra un mensaje de éxito al usuario</li>
+                </ul>
+            </section>
+
+            <!-- ─── GESTIÓN DE RECLAMOS ─── -->
+            <section class="doc-section" id="reclamos-admin" data-title="Gestión de Reclamos">
+                <div class="section-tag">Libro de Reclamaciones</div>
+                <h1>Gestión de Reclamos</h1>
+                <p class="lead">Cómo administrar y responder a los reclamos recibidos.</p>
+
+                <h2>Ubicación de los Reclamos</h2>
+                <div class="code-block">
+                    <div class="code-header"><span>Archivos de Reclamos</span></div>
+                    <pre><code>webCesVali/
+├── reclamos.txt                  # Registro principal de reclamos
+└── uploads/                      # Archivos adjuntos de los reclamos
+    └── [timestamp]_nombre_archivo.ext</code></pre>
+                </div>
+
+                <h2>Cómo Configurar los Correos de Notificación</h2>
+                <ol class="steps">
+                    <li><div class="step-num">1</div><div>Abre el archivo <code>guardar_reclamo.php</code></div></li>
+                    <li><div class="step-num">2</div><div>Busca las líneas donde se configura PHPMailer (líneas 154-168)</div></li>
+                    <li><div class="step-num">3</div><div>Modifica los parámetros de SMTP, usuario y contraseña según tu proveedor de correo</div></li>
+                    <li><div class="step-num">4</div><div>Modifica los correos de destino en las líneas <code>$mail-&gt;addAddress()</code> y <code>$mail-&gt;addCC()</code></div></li>
+                </ol>
+
+                <div class="callout callout-info">
+                    <div class="callout-icon">ℹ️</div>
+                    <div>
+                        <strong>Nota importante:</strong> Según la normativa de INDECOPI, debes responder a los reclamos dentro de los 15 días hábiles siguientes a su recepción.
+                    </div>
+                </div>
+            </section>
+
+            <!-- ─── MANUAL DEL USUARIO FINAL ─── -->
+            <section class="doc-section" id="usuario-final" data-title="Manual del Usuario Final">
+                <div class="section-tag">Guías</div>
+                <h1>Manual del Usuario Final</h1>
+                <p class="lead">Guía paso a paso para clientes que visitan el sitio web de CESVALI.</p>
+
+                <h2>Cómo Simular un Préstamo con Garantía de Joyas</h2>
+                <ol class="steps">
+                    <li><div class="step-num">1</div><div>Ve a la página de inicio o a "Garantía Joyas"</div></li>
+                    <li><div class="step-num">2</div><div>Selecciona la pureza del oro (14k, 18k, 21k o 24k)</div></li>
+                    <li><div class="step-num">3</div><div>Ingresa el peso en gramos</div></li>
+                    <li><div class="step-num">4</div><div>Haz clic en "Continuar" para ver el resumen</div></li>
+                    <li><div class="step-num">5</div><div>Haz clic en "Tasar Ahora" para contactar por WhatsApp</div></li>
+                </ol>
+
+                <h2>Cómo Simular un Préstamo con Garantía de Electrodomésticos</h2>
+                <ol class="steps">
+                    <li><div class="step-num">1</div><div>Ve a "Garantía Electro"</div></li>
+                    <li><div class="step-num">2</div><div>Describe tu artículo y modelo, y haz clic en "Tasar Ahora"</div></li>
+                    <li><div class="step-num">3</div><div>Si ya conoces el valor de tasación, ingrésalo en la sección "Simular Préstamo"</div></li>
+                    <li><div class="step-num">4</div><div>Ve el monto total a pagar y la fecha de pago</div></li>
+                </ol>
+
+                <h2>Cómo Presentar un Reclamo</h2>
+                <ol class="steps">
+                    <li><div class="step-num">1</div><div>Ve a la página "Libro de Reclamaciones"</div></li>
+                    <li><div class="step-num">2</div><div>Llena todos los campos obligatorios (marcados con *)</div></li>
+                    <li><div class="step-num">3</div><div>Describe detalladamente tu reclamo y tu pedido</div></li>
+                    <li><div class="step-num">4</div><div>Adjunta documentos si es necesario</div></li>
+                    <li><div class="step-num">5</div><div>Acepta la política de privacidad y haz clic en "Realizar Reclamo"</div></li>
+                </ol>
+
+                <h2>Cómo Ver Testimonios</h2>
+                <ol class="steps">
+                    <li><div class="step-num">1</div><div>Ve a la página de inicio o a "Testimonios"</div></li>
+                    <li><div class="step-num">2</div><div>Usa los botones de flecha para navegar por el carrusel</div></li>
+                </ol>
+            </section>
+
+            <!-- ─── MANUAL DEL ADMINISTRADOR ─── -->
+            <section class="doc-section" id="admin-guide" data-title="Manual del Administrador">
+                <div class="section-tag">Guías</div>
+                <h1>Manual del Administrador</h1>
+                <p class="lead">Guía completa para tareas de mantenimiento y administración del sitio.</p>
+
+                <h2>Credenciales de Acceso</h2>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>Plataforma</th><th>URL</th><th>Usuario</th><th>Contraseña</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Hosting</strong></td>
+                                <td><a href="https://clientes.latinoamericahosting.com.pe/clientarea.php" target="_blank">Latinoamérica Hosting</a></td>
+                                <td><code>lamentemaestraguti@gmail.com</code></td>
+                                <td><code>KA5QLuePP7*e8dE&lt;</code></td>
+                            </tr>
+                            <tr>
+                                <td><strong>cPanel</strong></td>
+                                <td><a href="https://www.cesvali.com:2083/" target="_blank">cesvali.com:2083</a></td>
+                                <td><code>cesvalic</code></td>
+                                <td><code>F6md3)o#PG17iJ</code></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Admin Testimonios</strong></td>
+                                <td><a href="../admin_testimonios.php" target="_blank">admin_testimonios.php</a></td>
+                                <td>-</td>
+                                <td><code>vali123</code></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2>Actualizar las Tasas de Oro</h2>
+                <ol class="steps">
+                    <li><div class="step-num">1</div><div>Accede al servidor via FTP o cPanel</div></li>
+                    <li><div class="step-num">2</div><div>Navega a la carpeta <code>data/</code></div></li>
+                    <li><div class="step-num">3</div><div>Abre el archivo <code>tasas.json</code></div></li>
+                    <li><div class="step-num">4</div><div>Modifica los valores según las tasas actuales del mercado</div></li>
+                    <li><div class="step-num">5</div><div>Guarda el archivo</div></li>
+                </ol>
+
+                <h2>Agregar un Testimonio</h2>
+                <ol class="steps">
+                    <li><div class="step-num">1</div><div>Ve a <code>admin_testimonios.php</code></div></li>
+                    <li><div class="step-num">2</div><div>Inicia sesión con la contraseña</div></li>
+                    <li><div class="step-num">3</div><div>Llena el formulario de "Agregar Nuevo Testimonio"</div></li>
+                    <li><div class="step-num">4</div><div>Sube una foto opcional del cliente</div></li>
+                    <li><div class="step-num">5</div><div>Haz clic en "Guardar Testimonio"</div></li>
+                </ol>
+
+                <h2>Revisar Reclamos</h2>
+                <ol class="steps">
+                    <li><div class="step-num">1</div><div>Accede al servidor via FTP o cPanel</div></li>
+                    <li><div class="step-num">2</div><div>Abre el archivo <code>reclamos.txt</code> para ver todos los reclamos</div></li>
+                    <li><div class="step-num">3</div><div>Revisa los correos electrónicos de notificación (se envían automáticamente)</div></li>
+                    <li><div class="step-num">4</div><div>Descarga archivos adjuntos desde la carpeta <code>uploads/</code> si es necesario</div></li>
+                    <li><div class="step-num">5</div><div>Responde al cliente dentro de los 15 días hábiles</div></li>
+                </ol>
+
+                <h2>Cambiar los Correos de Notificación de Reclamos</h2>
+                <ol class="steps">
+                    <li><div class="step-num">1</div><div>Abre el archivo <code>guardar_reclamo.php</code></div></li>
+                    <li><div class="step-num">2</div><div>Busca las líneas 166-169:</div></li>
+                </ol>
+                <div class="code-block">
+                    <div class="code-header"><span>guardar_reclamo.php</span></div>
+                    <pre><code>$mail->setFrom('asbuprop2610@asbuprop.com', 'Libro de Reclamaciones');
+$mail->addAddress('administracion@cesvali.com');
+$mail->addCC('ceo@cesvali.com');
+$mail->addCC('lamentemaestraguti@gmail.com');</code></pre>
+                </div>
+                <ol class="steps" start="3">
+                    <li><div class="step-num">3</div><div>Modifica los correos según tus necesidades</div></li>
+                    <li><div class="step-num">4</div><div>Guarda el archivo</div></li>
+                </ol>
+            </section>
+
+            <!-- ─── FAQ ─── -->
+            <section class="doc-section" id="faq" data-title="Preguntas Frecuentes">
+                <div class="section-tag">Soporte</div>
+                <h1>Preguntas Frecuentes</h1>
+
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>¿Qué es un préstamo prendario?</summary>
+                        <p>Es un préstamo rápido en el que dejas un objeto de valor (joyas de oro o electrodomésticos) como garantía para recibir dinero en efectivo de inmediato.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>¿Qué electrodomésticos aceptan como garantía?</summary>
+                        <p>Aceptamos televisores (Smart TVs), laptops, consolas de videojuegos, cámaras fotográficas, celulares modernos y más electrodomésticos en buen estado.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>¿Qué purezas de oro aceptan?</summary>
+                        <p>Aceptamos oro de 14k, 18k, 21k y 24k.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>¿Cómo se determina el valor de mi joya?</summary>
+                        <p>Contamos con tasadores expertos que evalúan el peso exacto, la pureza (kilataje) y el valor actual del oro en el mercado internacional.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>¿Qué tan rápido puedo obtener mi dinero?</summary>
+                        <p>¡De forma inmediata! Una vez tasada tu garantía y firmado el contrato, recibes el efectivo o la transferencia bancaria al instante.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>¿Cuál es el plazo para pagar el préstamo?</summary>
+                        <p>Ofrecemos contratos renovables cada 30 días. Puedes renovar tu contrato indefinidamente mientras pagas el interés mensual correspondiente.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>¿Dónde puedo pagar mi préstamo?</summary>
+                        <p>Puedes realizar tus pagos mediante transferencia, Yape, depósitos en BCP e Interbank, o presencialmente en nuestras oficinas.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>¿Necesito historial crediticio para acceder al préstamo?</summary>
+                        <p>No, no es necesario contar con historial crediticio, ya que el préstamo se otorga en función de la garantía presentada.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>¿Mis artículos están seguros en CESVALI?</summary>
+                        <p>Sí, CESVALI asume la obligación de custodiar y conservar los bienes entregados en garantía durante la vigencia del contrato.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>¿Por qué no se muestran los productos o testimonios?</summary>
+                        <p>Verifica que los archivos JSON en la carpeta <code>data/</code> tengan sintaxis válida. Usa <a href="https://jsonlint.com" target="_blank">JSONLint</a> para validar.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Los correos de reclamos no llegan, ¿qué hago?</summary>
+                        <p>Revisa la configuración SMTP en <code>guardar_reclamo.php</code>. Asegúrate de que los datos de usuario, contraseña, host y puerto sean correctos.</p>
+                    </details>
+                </div>
+            </section>
+
+            <!-- ─── CONTACTO ─── -->
+            <section class="doc-section" id="contacto" data-title="Contacto Técnico">
+                <div class="section-tag">Soporte</div>
+                <h1>Contacto Técnico</h1>
+                <p class="lead">¿Encontraste un error o necesitas asistencia? Comunícate con el equipo de desarrollo.</p>
+
+                <div class="contact-cards">
+                    <div class="contact-card">
+                        <div class="contact-icon">📧</div>
+                        <div>
+                            <strong>Correo técnico</strong>
+                            <p><a href="mailto:soporte@cesvali.com">soporte@cesvali.com</a></p>
+                            <small>Tiempo de respuesta: 24–48 h hábiles</small>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">💻</div>
+                        <div>
+                            <strong>Información de Hosting</strong>
+                            <p>Proveedor: Latinoamérica Hosting</p>
+                            <p>Panel: cPanel</p>
+                            <small>Sitio web registrado en la SBS</small>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <strong>Desarrolladores</strong>
+                            <p>JSANTUR: 977201449</p>
+                            <p>JBAYONA: 910303599</p>
+                            <small>Atención por WhatsApp o llamada</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="callout callout-info">
+                    <div class="callout-icon">ℹ️</div>
+                    <div>
+                        Al reportar un error, incluye siempre: <strong>versión del navegador</strong>, <strong>sistema operativo</strong>, <strong>pasos para reproducirlo</strong> y una <strong>captura de pantalla</strong> si es posible.
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pagination -->
+            <div class="doc-pagination" id="docPagination">
+                <button class="page-btn" id="prevBtn">← Anterior</button>
+                <button class="page-btn primary" id="nextBtn">Siguiente →</button>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

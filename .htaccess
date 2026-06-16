@@ -1,0 +1,15 @@
+RewriteEngine On
+
+# 1. Redirigir de /archivo.html a /archivo (ocultar en la URL visible)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^\ ]+)\.html
+RewriteRule ^/?(.*)\.html$ /$1 [L,R=301]
+
+# 2. Servir internamente el archivo .html cuando se solicita /archivo
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [NC,L]
+
+# Opcional: Manejo de PHP para otras rutas (ej: api_testimonios) sin extensión
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [NC,L]
