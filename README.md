@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://report-notebook-young-stone-9766.fly.dev/login">
+  <a href="https://www.cesvali.com/">
     <img src="./assets/img/jsantur-cesvali.webp" alt="Casa de Empeño VALI" width="80%">
   </a>
 </p>
