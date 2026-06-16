@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://report-notebook-young-stone-9766.fly.dev/login">
-    <img src="./public/img/jsantur-cesvali.webp" alt="Sistema de Control de Unidades Vehiculares" width="80%">
+    <img src="./assets/img/jsantur-cesvali.webp" alt="Casa de Empeño VALI" width="80%">
   </a>
 </p>
 
