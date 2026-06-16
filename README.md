@@ -1,3 +1,9 @@
+<p align="center">
+  <a href="https://report-notebook-young-stone-9766.fly.dev/login">
+    <img src="./public/img/jsantur-cesvali.webp" alt="Sistema de Control de Unidades Vehiculares" width="80%">
+  </a>
+</p>
+
 # 🏦 Plataforma Web Corporativa - Casa de Empeño Seguro VALI
 
 ![PHP](https://img.shields.io/badge/PHP-8.0+-777BB4?style=flat&logo=php&logoColor=white)
