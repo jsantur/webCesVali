@@ -57,4 +57,4 @@ Plataforma web corporativa diseñada y desarrollada para **Casa de Empeño Segur
 
 1. Clonar el repositorio:
 ```bash
-git clone https://github.com/tu-usuario/casa-empeno-vali.git
+git clone https://github.com/jsantur/webCesVali.git
